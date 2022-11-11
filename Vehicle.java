@@ -11,6 +11,7 @@ public class Vehicle {
     private double direction;
     private double x;
     private double y;
+    private double currentSpeed;
    
 
     public Vehicle(int nrDoors, Color color, double enginePower, String modelName, double direction, double x, double y) {
@@ -23,6 +24,10 @@ public class Vehicle {
         this.y = y;
     }
 
+
+    public void getCurrentSpeed(Double speed){
+        currentSpeed = speed;
+    }
 
     public int getNrDoors(){
         return nrDoors;

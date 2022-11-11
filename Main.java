@@ -1,9 +1,9 @@
 
 
-public class test.java {
+public class Main {
 
 	public static void main(String[] args) {
-		Saab95 saab95 = new Saab95(2, Color.red, 125, "Saab95");
+		Saab95 saab95 = new Saab95();
 
 		System.out.println("Nr of doors?" + Saab95.nrDoors());
 		System.out.println("Color " + Saab95.Color());
