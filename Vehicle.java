@@ -24,7 +24,6 @@ public class Vehicle {
         this.y = y;
     }
 
-
     public void getCurrentSpeed(Double speed){
         currentSpeed = speed;
     }
@@ -54,6 +53,19 @@ public class Vehicle {
 
     public void stopEngine(){
 	    currentSpeed = 0;
+    }
+
+    public void move(){
+    x += Math.cos(direction)*currentSpeed;
+    y += Math.sin(direction)*currentSpeed;
+    }
+
+    public void turnLeft(){
+        direction += (Math.PI/180);
+    }
+
+    public void turnRight(){
+        direction += -(Math.PI/180);
     }
 }
 
