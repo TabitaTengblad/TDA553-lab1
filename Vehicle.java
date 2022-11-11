@@ -8,14 +8,19 @@ public class Vehicle {
     private Color color;
     private double enginePower;
     private String modelName;
+    private double direction;
+    private double x;
+    private double y;
+   
 
-    public Vehicle(){}
-
-    public Vehicle(int nrDoors2, Color color2, double enginePower2, String modelName2) {
+    public Vehicle(int nrDoors, Color color, double enginePower, String modelName, double direction, double x, double y) {
         this.nrDoors = nrDoors;
         this.color = color;
         this.enginePower = enginePower;
         this.modelName = modelName;
+        this.direction = direction;
+        this.x = x;
+        this.y = y;
     }
 
 
@@ -44,18 +49,7 @@ public class Vehicle {
 
     public void stopEngine(){
 	    currentSpeed = 0;
-
     }
-    // TODO fix this method according to lab pm
-    public void gas(double amount){
-     incrementSpeed(amount);
-    }
-
-    // TODO fix this method according to lab pm
-    public void brake(double amount){
-     decrementSpeed(amount);
-    }
-
 }
 
 

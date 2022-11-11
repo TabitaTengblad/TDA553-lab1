@@ -1,55 +1,17 @@
 import java.awt.*;
 
-import javax.swing.plaf.synth.ColorType;
 
 public class Saab95 extends Vehicle{
 
     public boolean turboOn;
-    public int nrDoors; // Number of doors on the car
-    public double enginePower; // Engine power of the car
-    public double currentSpeed; // The current speed of the car
-    public Color color; // Color of the car
-    public String modelName; // The car model name
-    
+  
 
-    public Saab95(int nrDoors, ColorType color, double enginePower, String modelName ){
-        super(nrDoors, color, enginePower, modelName);
-        turboOn = false;
-        this.nrDoors = 2;
-        this.color = Color.red;
-        this.enginePower = 125;
-	    this.turboOn = false;
-        this.modelName = "Saab95";
-
+    public Saab95(int nrDoors, Color color, double enginePower, String modelName ){
+        super(2, Color.red, 125, "Saab95");
+        this.turboOn = false;
         stopEngine();
     }
     
-    public int getNrDoors(){
-        return nrDoors;
-    }
-    public double getEnginePower(){
-        return enginePower;
-    }
-
-    public double getCurrentSpeed(){
-        return currentSpeed;
-    }
-
-    public Color getColor(){
-        return color;
-    }
-
-    public void setColor(Color clr){
-	    color = clr;
-    }
-
-    public void startEngine(){
-	    currentSpeed = 0.1;
-    }
-
-    public void stopEngine(){
-	    currentSpeed = 0;
-    }
 
     public void setTurboOn(){
 	    turboOn = true;

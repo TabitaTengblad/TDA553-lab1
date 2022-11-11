@@ -7,8 +7,8 @@ public class Volvo240 extends Vehicle{
     public final static double trimFactor = 1.25;
    
     
-    public Volvo240(int nrDoors, ColorType color, double enginePower, String modelName )  {
-        super(nrDoors, color, enginePower, modelName);
+    public Volvo240(int nrDoors, Color color, double enginePower, String modelName )  {
+        super(4, Color. black, 100,"Volvo240");
 
        // this.nrDoors = 4;
        // this.color = Color.black;
@@ -17,32 +17,8 @@ public class Volvo240 extends Vehicle{
         stopEngine();
     }
     
-    public int getNrDoors(){
-        return nrDoors;
-    }
-    public double getEnginePower(){
-        return enginePower;
-    }
-
-    public double getCurrentSpeed(){
-        return currentSpeed;
-    }
-
-    public Color getColor(){
-        return color;
-    }
-
-    public void setColor(Color clr){
-	    color = clr;
-    }
-
-    public void startEngine(){
-	    currentSpeed = 0.1;
-    }
-
-    public void stopEngine(){
-	    currentSpeed = 0;
-    }
+   
+  
     
     public double speedFactor(){
         return enginePower * 0.01 * trimFactor;
