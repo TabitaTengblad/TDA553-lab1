@@ -12,7 +12,6 @@ public class Vehicle {
     private double x;
     private double y;
     private double currentSpeed;
-   
 
     public Vehicle(int nrDoors, Color color, double enginePower, String modelName, double direction, double x, double y) {
         this.nrDoors = nrDoors;
@@ -56,16 +55,16 @@ public class Vehicle {
     }
 
     public void move(){
-    x += Math.cos(direction)*currentSpeed;
-    y += Math.sin(direction)*currentSpeed;
+    x += x + (Math.cos(direction)*currentSpeed);
+    y += y + (Math.sin(direction)*currentSpeed);
     }
 
     public void turnLeft(){
-        direction += (Math.PI/180);
+        direction = direction -  90 *(Math.PI/180);
     }
 
     public void turnRight(){
-        direction += -(Math.PI/180);
+        direction = direction - 90 *(Math.PI/180);
     }
 }
 
