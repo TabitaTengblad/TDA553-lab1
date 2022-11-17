@@ -8,7 +8,7 @@ public class Volvo240 extends Vehicle{
    
     
     public Volvo240(int nrDoors, Color color, double enginePower, String modelName )  {
-        super(4, Color. black, 100,"Volvo240");
+        super(4, Color.black, 100,"Volvo240",  5, 20,20);
 
        // this.nrDoors = 4;
        // this.color = Color.black;
@@ -17,19 +17,8 @@ public class Volvo240 extends Vehicle{
         stopEngine();
     }
     
-   
-  
-    
     public double speedFactor(){
-        return enginePower * 0.01 * trimFactor;
-    }
-
-    public void incrementSpeed(double amount){
-	    currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
-    }
-
-    public void decrementSpeed(double amount){
-        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+        return getEnginePower() * 0.01 * trimFactor;
     }
 
     // TODO fix this method according to lab pm

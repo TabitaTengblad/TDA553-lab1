@@ -2,7 +2,7 @@ import java.awt.*;
 
 import javax.swing.plaf.synth.ColorType;
 
-public class Vehicle {
+public abstract class Vehicle {
     
     private int nrDoors; 
     private Color color;
@@ -41,6 +41,16 @@ public class Vehicle {
     public Color getColor(){
         return color;
     }
+
+    public void incrementSpeed(double amount){
+	    currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+    }
+
+    public void decrementSpeed(double amount){
+        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+    }
+
+    abstract double speedFactor();
 
     public void setColor(Color clr){
 	    color = clr;

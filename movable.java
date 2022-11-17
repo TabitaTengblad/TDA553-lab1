@@ -1,6 +1,7 @@
-public class Movable
-interface Movable
+interface Movable {
+    void move();
+    void turnLeft();
+    void turnRight();
+}
 
-void move();
-void turnLeft();
-void turnRight();
+
