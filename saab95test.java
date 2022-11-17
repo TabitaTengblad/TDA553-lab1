@@ -23,13 +23,33 @@ public class saab95test {
     public void speedFactorisSpeed(){
         Saab95 testSaab = new Saab95();
         testSaab.speedFactor();
-        assertTrue(testSaab.getSpeedFactor() == 0)
+        assertTrue(testSaab.getSpeedFactor() == 0);
     }
 
-    public void getColorPaint(){
+    public void setColorPaint(){
         Saab95 testSaab = new Saab95();
         testSaab.setColor();
-        assertTrue(testSaab.getColor() == );
+        assertTrue(testSaab.getColor() == clr);
+        //varför fungerar inte setColor? Vad ska man ha i sista parantesen sist?
+    }
+
+    public void startEngineStart(){
+        Saab95 testSaab = new Saab95();
+        testSaab.startEngine();
+        assertTrue(testSaab.getEnginePower() == 0);
+    }
+
+    public void stopEngineStop(){
+        Saab95 testSaab = new Saab95();
+        testSaab.stopEngine();
+        assertTrue(testSaab.getEnginePower() == 0);
+    }
+    public void moveCar(){
+        Saab95 testSaab = new Saab95();
+        testSaab.move();
+        assertTrue(testSaab.getMove() == 0);
+        // vilket värde ska man byta ut 0 till?
+
     }
 }
 
