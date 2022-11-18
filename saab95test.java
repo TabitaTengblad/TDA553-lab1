@@ -55,24 +55,23 @@ public class saab95test {
     }
 
     public void doesMoveCarMoveCar(){ //fel
-        Saab95 testSaab = new Saab95();
-        testSaab.move();
-        assertTrue(testSaab.move() == 0);
+        //*Saab95 testSaab = new Saab95();
+        //testSaab.move();
+        //assertTrue(testSaab.move() == 0);
 
-        // vilket värde ska man byta ut 0 till?
-
+        // kolla om x värdet efter funktionen är mindre/större än innan fär att se om den har röt sig
     }
 
-    public void doesTurboTurnOff();{ //hjälp
+    public void doesTurboTurnOff(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOff();
-        assertTrue(testSaab.turboOn(); = false);
+        assertTrue(testSaab.isTurboOn() == false);
     }
 
-    public void doesTurboTurnOn();{ //hjälp
+    public void doesTurboTurnOn(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOn();
-        assertTrue(testSaab.turboOn(); = true);
+        assertTrue(testSaab.isTurboOn() == true);
     }
     public void testNumberOfDoors(){ //klar
         Saab95 testSaab = new Saab95();
