@@ -26,6 +26,7 @@ public abstract class Vehicle {
 
     public void getCurrentSpeed(Double speed){
         currentSpeed = speed;
+        
     }
 
     public int getNrDoors(){ //ja

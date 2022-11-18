@@ -18,16 +18,24 @@ public class Volvo240 extends Vehicle{
     }
     
     public double speedFactor(){
+        if (speed>= 0 || speed<= enginePower){
         return getEnginePower() * 0.01 * trimFactor;
+        }
     }
 
-    // TODO fix this method according to lab pm
+    // Kanske funkar
     public void gas(double amount){
-        incrementSpeed(amount);
+        if (amount >= 1.0 || amount <= 1.0){
+            incrementSpeed(amount);
+        }
+        
     }
 
-    // TODO fix this method according to lab pm
+    // Kanske funkar nu?
     public void brake(double amount){
-        decrementSpeed(amount);
+        if (amount >= 1.0 || amount <= 0.0){
+            decrementSpeed(amount);
+        }
+        
     }
 }
