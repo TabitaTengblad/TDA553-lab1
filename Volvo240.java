@@ -18,7 +18,9 @@ public class Volvo240 extends Vehicle{
     }
     
     public double speedFactor(){
+        if (speed>= 0 || speed<= enginePower){
         return getEnginePower() * 0.01 * trimFactor;
+        }
     }
 
     // Kanske funkar
