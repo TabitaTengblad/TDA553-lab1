@@ -15,8 +15,8 @@ public abstract class Vehicle {
 
     public Vehicle(int nrDoors, Color color, double enginePower, String modelName, double direction, double x, double y) {
         this.nrDoors = nrDoors;
-        this.color = color;
-        this.enginePower = enginePower;
+        this.color = color; //testat
+        this.enginePower = enginePower; 
         this.modelName = modelName;
         this.direction = direction;
         this.x = x;
@@ -27,10 +27,10 @@ public abstract class Vehicle {
         currentSpeed = speed;
     }
 
-    public int getNrDoors(){
+    public int getNrDoors(){ //ja
         return nrDoors;
     }
-    public double getEnginePower(){
+    public double getEnginePower(){ //ja
         return enginePower;
     }
 
@@ -38,7 +38,7 @@ public abstract class Vehicle {
         return currentSpeed;
     }
 
-    public Color getColor(){
+    public Color getColor(){ //ja
         return color;
     }
 
@@ -50,17 +50,17 @@ public abstract class Vehicle {
         currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
     }
 
-    abstract double speedFactor();
+    abstract double speedFactor(); //klar
 
-    public void setColor(Color clr){
+    public void setColor(Color clr){ //klar
 	    color = clr;
     }
 
-    public void startEngine(){
+    public void startEngine(){ //testat
 	    currentSpeed = 0.1;
     }
 
-    public void stopEngine(){
+    public void stopEngine(){ //testat
 	    currentSpeed = 0;
     }
 
