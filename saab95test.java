@@ -14,72 +14,72 @@ public class saab95test {
         testSaab.incrementSpeed(10);
         assertTrue(testSaab.getCurrentSpeed() == 12.5);
     }
-
-    public void decrementSpeedDecreesesSpeed(){ //klar
+    @Test
+    public void decrementSpeedDecreesesSpeed(){ //inte klar
         Saab95 testSaab = new Saab95();
         testSaab.incrementSpeed(10);
-
         testSaab.decrementSpeed(5);
         assertTrue(testSaab.getCurrentSpeed() == 4.375 );
     }
-
+    @Test
     public void speedFactorisSpeed(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.speedFactor();
         assertTrue(testSaab.speedFactor() == 1.625);
     }
-
+    @Test
     public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.setColor(Color.CYAN);
         assertTrue(testSaab.getColor() == Color.CYAN);
-        //har den bytt färg
+        //har den bytt färg ska man tänka
     }
-
+    @Test
     public void testEnginePower(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.getEnginePower();
         assertTrue(testSaab.getEnginePower() == 125);
     }
-
+    @Test
     public void startEngineStart(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.startEngine();
         assertTrue(testSaab.getCurrentSpeed() == 0.1);
     }
-
+    @Test
     public void stopEngineStop(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.stopEngine();
         assertTrue(testSaab.getCurrentSpeed() == 0);
     }
-
-    public void doesMoveCarMoveCar(){ //fel
-        //*Saab95 testSaab = new Saab95();
-        //testSaab.move();
-        //assertTrue(testSaab.move() == 0);
-
+    @Test
+    public void doesMoveCarMoveCar(){ //klar
+        Saab95 testSaab = new Saab95();
+        double startXposition = testSaab.getX();
+        testSaab.startEngine();
+        testSaab.move();
+        assertTrue(testSaab.getX() > startXposition);
         // kolla om x värdet efter funktionen är mindre/större än innan fär att se om den har röt sig
     }
-
+    @Test
     public void doesTurboTurnOff(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOff();
         assertTrue(testSaab.isTurboOn() == false);
     }
-
+    @Test
     public void doesTurboTurnOn(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOn();
         assertTrue(testSaab.isTurboOn() == true);
     }
+    @Test
     public void testNumberOfDoors(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.getNrDoors();
         assertTrue(testSaab.getNrDoors() == 2);
-
     }
-
+    @Test
     public void testGetCurrentSpeed(){
 
     }

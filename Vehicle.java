@@ -78,7 +78,7 @@ public abstract class Vehicle {
     }
 
     public void turnLeft(){
-        direction = direction -  90 *(Math.PI/180);
+        direction = direction +  90 *(Math.PI/180);
     }
 
     public void turnRight(){
