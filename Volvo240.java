@@ -1,6 +1,6 @@
 import java.awt.*;
 
-import javax.swing.plaf.synth.ColorType;
+
 
 public class Volvo240 extends Vehicle{
 

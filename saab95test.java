@@ -15,10 +15,12 @@ public class saab95test {
         assertTrue(testSaab.getCurrentSpeed() == 12.5);
     }
 
-    public void decrementSpeedDecreesesSpeed(){ //fel
+    public void decrementSpeedDecreesesSpeed(){ //klar
         Saab95 testSaab = new Saab95();
-        testSaab.decrementSpeed(0);
-        assertTrue(testSaab.getCurrentSpeed() == -12.5);
+        testSaab.incrementSpeed(10);
+
+        testSaab.decrementSpeed(5);
+        assertTrue(testSaab.getCurrentSpeed() == 4.375 );
     }
 
     public void speedFactorisSpeed(){ //klar
@@ -27,16 +29,16 @@ public class saab95test {
         assertTrue(testSaab.speedFactor() == 1.625);
     }
 
-    public void setColorPaint(){ //klar???
+    public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
-        testSaab.setColor();
-        assertTrue(testSaab.getColor() == Color.red);
-        //varför fungerar inte setColor? Vad ska man ha i sista parantesen sist?
+        testSaab.setColor(Color.CYAN);
+        assertTrue(testSaab.getColor() == Color.CYAN);
+        //har den bytt färg
     }
 
-    public void testEnginePower(){ //hjälp
-        Saab95 testSaab95 = new Saab95();
-        testSaab.enginePower();
+    public void testEnginePower(){ //klar
+        Saab95 testSaab = new Saab95();
+        testSaab.getEnginePower();
         assertTrue(testSaab.getEnginePower() == 125);
     }
 
@@ -64,22 +66,24 @@ public class saab95test {
     public void doesTurboTurnOff();{ //hjälp
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOff();
-        assertTrue(testSaab.turboOn(); = false)
+        assertTrue(testSaab.turboOn(); = false);
     }
 
     public void doesTurboTurnOn();{ //hjälp
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOn();
-        assertTrue(testSaab.turboOn(); = true)
+        assertTrue(testSaab.turboOn(); = true);
     }
-    public void testNumberOfDoors(){ //klar?
+    public void testNumberOfDoors(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.getNrDoors();
         assertTrue(testSaab.getNrDoors() == 2);
 
     }
 
-    public void 
+    public void testGetCurrentSpeed(){
+
+    }
 }
 
 

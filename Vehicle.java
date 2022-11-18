@@ -21,6 +21,7 @@ public abstract class Vehicle {
         this.direction = direction;
         this.x = x;
         this.y = y;
+        this.currentSpeed = 0;
     }
 
     public void getCurrentSpeed(Double speed){
