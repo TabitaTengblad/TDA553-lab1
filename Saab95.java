@@ -11,6 +11,10 @@ public class Saab95 extends Vehicle{
         this.turboOn = false;
         stopEngine();
     }
+
+    public boolean isTurboOn(){
+        return turboOn;
+    }
     
     public void setTurboOn(){
 	    turboOn = true;

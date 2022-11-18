@@ -64,6 +64,13 @@ public abstract class Vehicle {
     public void stopEngine(){ //testat
 	    currentSpeed = 0;
     }
+    public double getX(){
+        return x;
+    }
+
+    public double getY(){
+        return y;
+    }
 
     public void move(){
     x += x + (Math.cos(direction)*currentSpeed);
