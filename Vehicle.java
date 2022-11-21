@@ -1,5 +1,4 @@
 import java.awt.*;
-
 import javax.swing.plaf.synth.ColorType;
 
 public abstract class Vehicle {
@@ -12,7 +11,7 @@ public abstract class Vehicle {
     private double x;
     private double y;
     private double currentSpeed;
-
+   
     public Vehicle(int nrDoors, Color color, double enginePower, String modelName, double direction, double x, double y) {
         this.nrDoors = nrDoors;
         this.color = color; //testat
@@ -26,7 +25,6 @@ public abstract class Vehicle {
 
     public void getCurrentSpeed(Double speed){
         currentSpeed = speed;
-        
     }
 
     public int getNrDoors(){ //ja
@@ -85,7 +83,25 @@ public abstract class Vehicle {
     public void turnRight(){
         direction = direction - 90 *(Math.PI/180);
     }
+
+      // Kanske funkar
+      public void gas(double amount){
+        if (amount >= 1.0 || amount <= 1.0){
+            incrementSpeed(amount);
+        }  
+    }
+
+    // Kanske funkar nu?
+    public void brake(double amount){
+        if (amount >= 1.0 || amount <= 0.0){
+            decrementSpeed(amount);
+        }
+        
+    
+    }
 }
+
+
 
 
 

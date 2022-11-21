@@ -23,19 +23,5 @@ public class Volvo240 extends Vehicle{
         }
     }
 
-    // Kanske funkar
-    public void gas(double amount){
-        if (amount >= 1.0 || amount <= 1.0){
-            incrementSpeed(amount);
-        }
-        
-    }
 
-    // Kanske funkar nu?
-    public void brake(double amount){
-        if (amount >= 1.0 || amount <= 0.0){
-            decrementSpeed(amount);
-        }
-        
-    }
 }

@@ -22,7 +22,7 @@ public class saab95test {
         assertTrue(testSaab.getCurrentSpeed() == 4.375 );
     }
     @Test
-    public void speedFactorisSpeed(){ //klar
+    public void speedFactorisSpeed(){ //inte klar
         Saab95 testSaab = new Saab95();
         testSaab.speedFactor();
         assertTrue(testSaab.speedFactor() == 1.625);
@@ -83,6 +83,8 @@ public class saab95test {
     public void testGetCurrentSpeed(){
 
     }
-}
+
+    }
+
 
 

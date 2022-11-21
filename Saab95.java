@@ -12,15 +12,15 @@ public class Saab95 extends Vehicle{
         stopEngine();
     }
 
-    public boolean isTurboOn(){
+    public boolean isTurboOn(){ //Klar
         return turboOn;
     }
     
-    public void setTurboOn(){
+    public void setTurboOn(){ //Klar
 	    turboOn = true;
     }
 
-    public void setTurboOff(){
+    public void setTurboOff(){ //Klar
 	    turboOn = false;
     }
     
@@ -30,13 +30,4 @@ public class Saab95 extends Vehicle{
         return getEnginePower() * 0.01 * turbo;
     }
     
-    // TODO fix this method according to lab pm
-    public void gas(double amount){
-        incrementSpeed(amount);
-    }
-
-    // TODO fix this method according to lab pm
-    public void brake(double amount){
-        decrementSpeed(amount);
-    }
 }
