@@ -1,0 +1,61 @@
+1. Explain how you chose the inheritance hierarchy in Task 1, making reference to the Open-Closed Principle.
+
+
+När vi skapade klassen Vehicle gjorde vi den till en abstrakt super-klass. Den är alltså inte ett objekt och
+sub-klasserna ärver alla metoder till sig från super-klassen.
+Där la vi in allt som både Saab och Volvo skulle ärva, alltså alla metoder som de ska ha gemensamt. 
+Dessa metoder är getCurrentSpeed, getNrDoors, enginPower, currentSpeed, color, incrementSpeed, decrementSpeed,
+speedFactor, setColor, startEngin, stopEngin, getX, getY,move, turnLeft, turnRight, gas och break. 
+Anledningen till att man vill lägga alla dessa metoderna i en abstrakt klass är på grund av open-closed 
+principen; för att underlätta ändringar i fordonen. Om man kommer på att en metod är fel behöver
+ma bara ändra en gång istället för att ändra i varje klass.
+
+I sub-klasserna finns det specifika metoder för just de bilarna då vi har en abstrakt klass till speedFactor. I sub-klassen saab95 finns det metoder för 
+turbo och en för speedFactor och i volvo240 finns en metod för speedFactor. 
+(SpeedFactor räknas ut olika i de olika bilsorterna, därför finns de i båda.)   
+
+------------------------------------------------------------------------------------------------------------------
+2. Explain how you implemented each of the sanity checks in Task 4.
+
+        - gas() and brake() only accept values in the interval [0,1]:
+
+I gas och break har vi skrivit ett if-statment där amount måste vara antingen >=0.0 eller <=1.0.
+Detta gör att metoden inte körs om amount är större än 1, eller mindre än 0. 
+
+---------------
+        - currentSpeed always lies in the interval [0 , enginePower]:
+
+I Vehicle har vi satt att variabeln currentSpeed = 0 som utgångsvärde. I incrementSpeed kan currentSpeed
+inte vara större än enginePower, eftersom vi skrivit en Math.min framför uträkningarna som gör att den minsta
+värdet väljs. Om uträkningen blir större än enginPower kommer programmet välja enginPower som output. 
+
+----------------
+        - calls to gas() cannot result in the speed decreasing:
+
+I gas kallar vi på incrementSpeed, vilket är en metod som ändrar currentSpeed enligt en matematisk uträkning.
+Denna uträkningen ser ut såhär:
+
+        public void incrementSpeed(double amount){
+	            currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+            }
+
+Eftersom vi skrivit Math.min kommer metoden att välja det minsta värdet av antingen den matematiska uträkningen
+eller enginPower. Gas() kan inte bli negativ eftersom amount inte kan vara negativ. EnginPower är ett positivt värde. 
+
+
+-----------------
+
+        - calls to brake() cannot result in the speed increasing:
+
+I breake kallar vi på decrementSpeed, som ändrar currentSpeed enligt en matematisk uträkning.
+Uträkningen ser ut såhär:
+
+        public void decrementSpeed(double amount){
+                currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+            }
+
+Eftersom det står Math.max kommer programmet att välja det största värdet av beräkningen och 0.
+CurrentSpeed kommer därför aldrig bli mindre än 0. GetCurrentSpeed() = nuvarande hastigheten och
+detta - speedFactor() * amount, som är mellan 0 och 1, kommer resultera i ett värde som är mindre än 
+CurrentSpeed, kommer hastigheten alltid att minska. Blir uträkningen negativ väljs 0 som hastighet. 
+
