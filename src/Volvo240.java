@@ -3,6 +3,7 @@ import java.awt.*;
 
 
 public class Volvo240 extends Vehicle{
+    
     public double speedFactor;
 
     public final static double trimFactor = 1.25;
@@ -13,9 +14,9 @@ public class Volvo240 extends Vehicle{
         stopEngine();
     }
     
-    public double speedFactor(double enginePower, double currentSpeed){
+    public double speedFactor(double currentSpeed){
         if (currentSpeed>= 0.0 || currentSpeed<= enginePower){
-        return (enginePower * 0.01 * trimFactor);
+        return (getEnginePower() * 0.01 * trimFactor);
         }
     }
 }

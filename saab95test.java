@@ -1,9 +1,11 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
 
 import javax.management.relation.InvalidRoleValueException;
+
 
 import org.junit.Test;
 
@@ -85,14 +87,22 @@ public class saab95test {
 
     }
 
-    // @Test
-    // public void isGas(){
-    //     Vehicle testSaab = new Saab95();
+     @Test
+     public void isGas(){
+         Vehicle testSaab = new Saab95();
     
-    //     Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-    //         testSaab.Gas(2);
-    // });
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            testSaab.Gas(2);
+     });
     
     }
+    @Test
+    public void isBreak(){
+        Vehicle testSaabc= new Saab95();
+        Exception exception =assertThrows(IllegalArgumentException.class, () -> {
+            testSaab.Break(2);
+        });
+    }
+}
     
 //exception invalid value

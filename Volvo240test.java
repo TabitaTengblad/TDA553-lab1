@@ -9,8 +9,8 @@ import org.junit.Test;
 
 public class Volvo240test {
 
-
-public void speedFactorVolvo240(){
+@Test
+public void isspeedFactor(){
     Volvo240 testVolvo = new Volvo240();
     testVolvo.speedFactor();
     assertTrue(testVolvo.speedFactor() == getEnginePower() * 0.01 * trimFactor);
