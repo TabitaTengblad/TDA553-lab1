@@ -3,8 +3,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
 
+import javax.management.relation.InvalidRoleValueException;
+
 import org.junit.Test;
-import org.omg.CORBA.FloatSeqHelper;
 
 public class saab95test {
 
@@ -22,7 +23,7 @@ public class saab95test {
         assertTrue(testSaab.getCurrentSpeed() == 4.375 );
     }
     @Test
-    public void speedFactorisSpeed(){ //inte klar
+    public void speedFactorisSpeed(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.speedFactor();
         assertTrue(testSaab.speedFactor() == 1.625);
@@ -84,7 +85,14 @@ public class saab95test {
 
     }
 
+    // @Test
+    // public void isGas(){
+    //     Vehicle testSaab = new Saab95();
+    
+    //     Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+    //         testSaab.Gas(2);
+    // });
+    
     }
-
-
-
+    
+//exception invalid value

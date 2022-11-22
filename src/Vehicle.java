@@ -91,15 +91,16 @@ public abstract class Vehicle {
         }  
     }
 
-    // Kanske funkar nu?
     public void brake(double amount){
         if (amount >= 1.0 || amount <= 0.0){
-            decrementSpeed(amount);
+            decrementSpeed(amount);}
+        else{
+            throw new IllegalArgumentException("Insert a value between 0 and 1");}
         }
         
     
     }
-}
+
 
 
 
