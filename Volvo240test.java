@@ -1,15 +1,18 @@
-public class Volvo240test {
-    
-}
-public void speedFactorVolvo240(){
-    Volvo240 testVolvo = new Volvo240();
-    testVolvo.speedfactor();
-    assertTrue(testVolvo.speedFactor() == getEnginePower() * 0.01 * trimFactor);
-}
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-// TODO fix this method according to lab pm
+import java.awt.Color;
+
+import javax.management.relation.InvalidRoleValueException;
+
+import org.junit.Test;
+
+public class Volvo240test {
+
+
 public void speedFactorVolvo240(){
     Volvo240 testVolvo = new Volvo240();
-    testVolvo.speedfactor();
+    testVolvo.speedFactor();
     assertTrue(testVolvo.speedFactor() == getEnginePower() * 0.01 * trimFactor);
+}
 }

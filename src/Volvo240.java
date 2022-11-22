@@ -1,22 +1,21 @@
 import java.awt.*;
-public double speedFactor;
 
 
 
 public class Volvo240 extends Vehicle{
+    public double speedFactor;
 
     public final static double trimFactor = 1.25;
    
     
     public Volvo240()  {
-        super(4, Color.black, 100,"Volvo240",  5, 20, 20);
-        this.speedFactor = speedFactor;
+        super(4, Color.black, 100, "Volvo240",  5, 20, 20);
         stopEngine();
     }
     
-    public double speedFactor(){
-        if (speed>= 0.0 || speed<= enginePower){
-        return getEnginePower() * 0.01 * trimFactor;
+    public double speedFactor(double enginePower, double currentSpeed){
+        if (currentSpeed>= 0.0 || currentSpeed<= enginePower){
+        return (enginePower * 0.01 * trimFactor);
         }
     }
 }

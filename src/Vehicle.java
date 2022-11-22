@@ -87,8 +87,7 @@ public abstract class Vehicle {
       // Kanske funkar
       public void gas(double amount){
         if (amount >= 1.0 || amount <= 1.0){
-            incrementSpeed(amount);
-        }  
+            incrementSpeed(amount);}  
     }
 
     public void brake(double amount){
