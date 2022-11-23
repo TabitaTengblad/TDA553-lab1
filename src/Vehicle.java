@@ -51,7 +51,13 @@ public abstract class Vehicle {
         currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
     }
 
-    abstract double speedFactor(); //klar
+    public double speedFactor(){
+        return 0.1;
+    } //klar
+
+    public double speedFactor(double num){
+        return num;
+    } //klar
 
     public void setColor(Color clr){ //klar
 	    color = clr;
@@ -87,21 +93,14 @@ public abstract class Vehicle {
 
       // Kanske funkar
       public void gas(double amount){
-        if (amount >= 0.0 || amount <= 1.0){
-            incrementSpeed(amount);}  
-        else{
-             throw new IllegalArgumentException("Insert a value between 0 and 1");}
+        if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount);  
     }
 
     public void brake(double amount){
-        if (amount >= 0.0 || amount <= 1.0){
-            decrementSpeed(amount);}
-        else{
-            throw new IllegalArgumentException("Insert a value between 0 and 1");}
-        }
-        
+        if (amount >= 0.0 || amount <= 1.0) decrementSpeed(amount);   
     
     }
+}
 
 
 

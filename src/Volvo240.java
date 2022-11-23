@@ -14,9 +14,13 @@ public class Volvo240 extends Vehicle{
         stopEngine();
     }
     
+    @Override
     public double speedFactor(double currentSpeed){
-        if (currentSpeed>= 0.0 || currentSpeed<= enginePower){
-        return (getEnginePower() * 0.01 * trimFactor);
+        double newFactor = speedFactor;
+        if (currentSpeed>= 0.0 || currentSpeed<= getEnginePower()){
+            newFactor= (getEnginePower() * 0.01 * trimFactor);
         }
+        return newFactor;
     }
+
 }

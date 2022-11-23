@@ -4,8 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.awt.Color;
 
-import javax.management.relation.InvalidRoleValueException;
-
 
 import org.junit.Test;
 
@@ -20,16 +18,10 @@ public class saab95test {
     @Test
     public void decrementSpeedDecreesesSpeed(){ //inte klar
         Saab95 testSaab = new Saab95();
-        testSaab.incrementSpeed(10);
         testSaab.decrementSpeed(5);
-        assertTrue(testSaab.getCurrentSpeed() == 4.375 );
+        assertTrue(testSaab.getCurrentSpeed() == 0 );
     }
-    @Test
-    public void speedFactorisSpeed(){ //klar
-        Saab95 testSaab = new Saab95();
-        testSaab.speedFactor();
-        assertTrue(testSaab.speedFactor() == 1.625);
-    }
+ 
     @Test
     public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
@@ -90,18 +82,15 @@ public class saab95test {
      @Test
      public void isGas(){
          Vehicle testSaab = new Saab95();
-    
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            testSaab.Gas(2);
-     });
+            testSaab.gas(2);
+
     
     }
     @Test
     public void isBreak(){
         Vehicle testSaabc= new Saab95();
-        Exception exception =assertThrows(IllegalArgumentException.class, () -> {
-            testSaab.Break(2);
-        });
+            testSaabc.brake(2);
+
     }
 }
     
