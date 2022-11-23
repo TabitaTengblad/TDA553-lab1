@@ -35,6 +35,7 @@ public abstract class Vehicle {
     }
 
     public double getCurrentSpeed(){
+        
         return currentSpeed;
     }
 
@@ -86,12 +87,14 @@ public abstract class Vehicle {
 
       // Kanske funkar
       public void gas(double amount){
-        if (amount >= 1.0 || amount <= 1.0){
+        if (amount >= 0.0 || amount <= 1.0){
             incrementSpeed(amount);}  
+        else{
+             throw new IllegalArgumentException("Insert a value between 0 and 1");}
     }
 
     public void brake(double amount){
-        if (amount >= 1.0 || amount <= 0.0){
+        if (amount >= 0.0 || amount <= 1.0){
             decrementSpeed(amount);}
         else{
             throw new IllegalArgumentException("Insert a value between 0 and 1");}
