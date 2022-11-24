@@ -20,7 +20,7 @@ public abstract class Vehicle {
         this.direction = direction;
         this.x = x;
         this.y = y;
-        this.currentSpeed = 0;
+        this.currentSpeed = 0; //Finns ej i Vehicle på rad 15, ska det vara så?
     }
 
     public void getCurrentSpeed(Double speed){

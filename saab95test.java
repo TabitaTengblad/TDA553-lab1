@@ -95,3 +95,5 @@ public class saab95test {
 }
     
 //exception invalid value
+//delegation och composition
+

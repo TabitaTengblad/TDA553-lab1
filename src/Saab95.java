@@ -4,11 +4,13 @@ import java.awt.*;
 public class Saab95 extends Vehicle{
 
     public boolean turboOn;
+    //public Motor motor;
   
 
     public Saab95(){
         super(2, Color.red, 125, "Saab95", 5, 20,20);
         this.turboOn = false;
+       // motor = new Motor(); så det ska se ut i dom andra
         stopEngine();
     }
 
@@ -17,6 +19,7 @@ public class Saab95 extends Vehicle{
     }
     
     public void setTurboOn(){ //Klar
+      //  motor.turboOn();
 	    turboOn = true;
     }
 
