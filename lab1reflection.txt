@@ -59,3 +59,11 @@ CurrentSpeed kommer därför aldrig bli mindre än 0. GetCurrentSpeed() = nuvara
 detta - speedFactor() * amount, som är mellan 0 och 1, kommer resultera i ett värde som är mindre än 
 CurrentSpeed, kommer hastigheten alltid att minska. Blir uträkningen negativ väljs 0 som hastighet. 
 
+---------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Anteckningar:
+
+- skapa en klass där man räknar antalet bilar på car transport
+- 

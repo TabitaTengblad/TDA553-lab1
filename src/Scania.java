@@ -1,16 +1,22 @@
+import java.awt.Color;
+import java.util.concurrent.atomic.AtomicLongFieldUpdater;
+
 import javax.swing.plaf.synth.ColorType;
 public class Scania extends Truck {
 
-    public FlatBed flatbed; //eventuellt ska denna ligga som ett attribut hos truck
     
+    private FlatbedAngle flatbedAngle;
+
+    private double angle;
 
     public Scania(){
-        super(2, Color.red, 125, "Scania", 5, 20,20);
-        flatbed = new Flatbed();
+        super(2, Color.RED, 125, "Scania", 5, 20,20 );
+        this.flatbedAngle = new FlatbedAngle(0);
+        this.angleOnFlatbed();
     }
 
-    public void raiseFlatBed(){ //Klar
-        flatbed.raiseFlatbed;//ska se ut typ såhär
-          
+    private void angleOnFlatbed() {
+        flatbedAngle.angleOnFlatbed(angle);
     }
+
 }

@@ -1,23 +1,21 @@
+import java.awt.Color;
+
 import javax.swing.plaf.synth.ColorType;
 
 public class CarTransporter extends Truck {
-   
-    public FlatBed flatbed;
-    public int nrOfLoadedCars;
-    
-    public CarTransporter(){
-        super(2, Color.red, 125, "CarTransporter", 5, 20,20);
-        this.nrOfLoadedCars = nrOfLoadedCars;
-        flatbed = new Flatbed();
-    }
+   private FlatbedOnOff flatbedOnOff;
+private FlatbedOnOff onOffFlatbed;
 
-    public void raiseFlatBed(){ //Klar
-        flatbed.raiseFlatbed;//ska se ut typ såhär
+ 
 
-    public int getnrOfLoadedCars(){
-        
-        return nrOfLoadedCars ;
-    }
-          
-}
+   public CarTransporter(){
+       super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
+       this.onOffFlatbed = new FlatbedOnOff();
+       this.onOffFlatbed();
+   }
+
+   private void onOffFlatbed() {
+       flatbedOnOff.onOffFlatbed();
+   }
+
 }

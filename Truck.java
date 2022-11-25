@@ -100,3 +100,7 @@ public abstract class Truck {
     //         throw new IllegalArgumentException("Insert a value between 0 and 1");}
     //     }
     }
+
+
+    // ärv  från vehicle!!! gör till sub-class
+    

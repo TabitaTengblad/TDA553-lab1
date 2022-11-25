@@ -1,7 +1,5 @@
 import java.awt.*;
 
-
-
 public class Volvo240 extends Vehicle{
     
     public double speedFactor;
