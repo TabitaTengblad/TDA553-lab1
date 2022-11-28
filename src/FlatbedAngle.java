@@ -9,3 +9,7 @@ public class FlatbedAngle {
     }
     
 }
+
+//---------Minnesanteckningar---------------------
+
+//Beata aproves

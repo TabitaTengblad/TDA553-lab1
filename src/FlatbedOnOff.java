@@ -12,5 +12,7 @@ public class FlatbedOnOff {
 
 }
 
+//---------Minnesanteckningar---------------------
 
+//Beata aproves
 //sub-typer till flatbed
