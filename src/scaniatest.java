@@ -5,15 +5,9 @@ import org.junit.Test;
 import java.awt.Color;
 
 
-
 public class scaniatest {
 
-    @Test
-    public void angleOnFlatbedWork (){ //inte klar än
-        Scania testScania = new Scania();
-        testScania.setAngleOnFlatbed2(70);
-        assertTrue(testScania.getAngleOnFlatbed() == 70 );
-    }
+
     @Test
     public void ensureStationaryWork(){ 
         Scania testScania = new Scania();
@@ -21,26 +15,24 @@ public class scaniatest {
         assertTrue(testScania.getAngleOnFlatbed() == 0 );
     }
     @Test
-    public void AngleNotZeroNoMove(){
+    public void AngleNotZeroNoMoveY(){
         Scania testScania = new Scania();
         testScania.move();
-        assertTrue()
+        assertTrue(testScania.getY() == 0);
     }
 
+    @Test
+    public void AngleNotZeroNoMoveX(){
+        Scania testScania = new Scania();
+        testScania.move();
+        assertTrue(testScania.getX() == 0);
 
-
-
-    //* */public void scaniaspeedzeroiszero(){ //Klar
-        //Scania testScania = new Scania();
-        //testScania.ScaniaSpeedzero(currentspeed > 0);
-        //assertTrue(testScania.ScaniaSpeedzero() == 0 );
-    //}
-    
-
+    }
 }
 
 //--------Minnesanteckningar--------------------------------------------------
 
-//Fixa testerna
+//klart
+
 
 
