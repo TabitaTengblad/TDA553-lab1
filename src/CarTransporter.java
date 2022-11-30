@@ -7,16 +7,16 @@ private FlatbedOnOff flatbedOnOff;
 private boolean onOffFlatbed;
 public double currentspeed;
 public double carsLoad;
-
+   
  
-
-   public CarTransporter(){
+    
+    public CarTransporter(){
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
        onOffFlatbed = true;
        carsLoad = 0;
        onOffFlatbed();
        this.currentspeed = 0;   //Verkar inte fatta vad currentspeed är... :( vet ej om det dska vara 0
-   }
+    }
 
    private boolean onOffFlatbed() {
        flatbedOnOff.onOffFlatbed();
@@ -25,13 +25,13 @@ public double carsLoad;
 
    public boolean getOnOffFlatbed(){
     return onOffFlatbed();
-   }
-
+    }
+          
    public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
     if (currentspeed > 0);
     return false;
 
-   }
+}
 
    
 }

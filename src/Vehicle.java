@@ -23,9 +23,9 @@ public abstract class Vehicle {
         this.currentSpeed = 0; //Finns ej i Vehicle på rad 15, ska det vara så?
     }
 
-    public void getCurrentSpeed(Double speed){
-        currentSpeed = speed;
-    }
+   // public void getCurrentSpeed(Double speed){
+    //    currentSpeed = speed;
+   // }
 
     public int getNrDoors(){ //ja
         return nrDoors;
@@ -43,12 +43,12 @@ public abstract class Vehicle {
         return color;
     }
 
-    public void incrementSpeed(double amount){
-	    currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+    private void incrementSpeed(double amount){
+	    currentSpeed = Math.min(currentSpeed + speedFactor() * amount,enginePower);
     }
 
-    public void decrementSpeed(double amount){
-        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+    private void decrementSpeed(double amount){
+        currentSpeed = Math.max(currentSpeed - speedFactor() * amount,0);
     }
 
     public double speedFactor(){
@@ -79,8 +79,8 @@ public abstract class Vehicle {
     }
 
     public void move(){
-    x += x + (Math.cos(direction)*currentSpeed);
-    y += y + (Math.sin(direction)*currentSpeed);
+    x = x + (Math.cos(direction)*currentSpeed);
+    y = y + (Math.sin(direction)*currentSpeed);
     }
 
     public void turnLeft(){
@@ -97,7 +97,8 @@ public abstract class Vehicle {
     }
 
     public void brake(double amount){
-        if (amount >= 0.0 || amount <= 1.0) decrementSpeed(amount);   
+        if (amount >= 0.0 || amount <= 1.0) decrementSpeed(amount);  
+       
     
     }
 }

@@ -10,13 +10,13 @@ import org.junit.Test;
 public class saab95test {
 
     @Test
-    public void incrementSpeedIncreasesSpeed() { //klar
+    public void incrementSpeedIncreasesSpeed() { //inte nödvändig, räcker med Gas
         Saab95 testSaab = new Saab95();
         testSaab.incrementSpeed(10);
         assertTrue(testSaab.getCurrentSpeed() == 12.5);
     }
     @Test
-    public void decrementSpeedDecreesesSpeed(){ //inte klar
+    public void decrementSpeedDecreesesSpeed(){ //inte nödvändig, räcker med Brake
         Saab95 testSaab = new Saab95();
         testSaab.decrementSpeed(5);
         assertTrue(testSaab.getCurrentSpeed() == 0 );
@@ -48,7 +48,7 @@ public class saab95test {
         assertTrue(testSaab.getCurrentSpeed() == 0);
     }
     @Test
-    public void doesMoveCarMoveCar(){ //klar
+    public void doesMoveCarMoveCar(){ //TODO måste kolla på om y-värdet ändras också, går det att göra med if-sats?
         Saab95 testSaab = new Saab95();
         double startXposition = testSaab.getX();
         testSaab.startEngine();
@@ -80,7 +80,7 @@ public class saab95test {
     }
 
      @Test
-     public void isGas(){
+     public void isGas(){ //TODO testerna testar inget, behöver en assert
          Vehicle testSaab = new Saab95();
             testSaab.gas(2);
 
