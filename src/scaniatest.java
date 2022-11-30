@@ -9,14 +9,14 @@ public class scaniatest {
     @Test
     public void angleOnFlatbedWork (){ //inte klar än
         Scania testScania = new Scania();
-        testScania.angleOnFlatbed();
-        assertTrue(testScania.angleOnFlatbedWork() = );
+        testScania.angleOnFlatbed(70);
+        assertTrue(testScania.angleOnFlatbed() = );
     }
     @Test
     public void scaniaMoveWork(){ //Klar
         Scania testScania = new Scania();
         testScania.ScaniaMoving(angle: 65);
-        assertTrue(testScania.ScaniaMoving() = 0 )
+        assertTrue(testScania.ScaniaMoving() = 0 );
     }
     @Test
     public void scaniaspeedzeroiszero(){ //Klar
@@ -29,5 +29,6 @@ public class scaniatest {
 
 //--------Minnesanteckningar--------------------------------------------------
 
-//verkar inte fatta att det är en testfil...
+//Fixa testerna
+
 

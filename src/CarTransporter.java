@@ -13,7 +13,7 @@ public double carsLoad;
    public CarTransporter(){
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
        onOffFlatbed();
-       this.currentspeed = 0;   //Verkar inte fatta vad currentspeed är... :( vet ej om det dska vara 0
+       this.currentspeed = 0;
    }
 
    private boolean onOffFlatbed() {
@@ -21,7 +21,7 @@ public double carsLoad;
        return true;
    }
 
-   public boolean getOnOffFlatbed(){
+   public boolean getOnOffFlatbed(boolean b){
     return onOffFlatbed();
    }
 

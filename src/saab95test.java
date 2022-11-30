@@ -1,8 +1,12 @@
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import java.awt.Color;
 import org.junit.Test;
+
+import Saab95;
+import Vehicle;
 
 public class saab95test {
 
