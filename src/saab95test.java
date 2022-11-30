@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class saab95test {
 
-    @Test
+    @Test //TODO när gas och brake funkar kan vi ta bort denna
     public void incrementSpeedIncreasesSpeed() { //klar
         Saab95 testSaab = new Saab95();
         testSaab.incrementSpeed(10);
@@ -45,7 +45,7 @@ public class saab95test {
         testSaab.stopEngine();
         assertTrue(testSaab.getCurrentSpeed() == 0);
     }
-    @Test
+    @Test //TODO kolla om ändring sker i y-värdet
     public void doesMoveCarMoveCar(){ //klar
         Saab95 testSaab = new Saab95();
         double startXposition = testSaab.getX();
@@ -77,7 +77,7 @@ public class saab95test {
 
     }
 
-     @Test
+     @Test //TODO måste ha assert för att funka, testar inget nu
      public void isGas(){
          Vehicle testSaab = new Saab95();
             testSaab.gas(2);
@@ -85,9 +85,9 @@ public class saab95test {
     
     }
     @Test
-    public void isBreak(){
-        Vehicle testSaabc= new Saab95();
-            testSaabc.brake(2);
+    public void isBrake(){
+        Vehicle testSaab= new Saab95();
+            testSaab.brake(2);
 
     }
 }

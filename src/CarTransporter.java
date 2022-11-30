@@ -3,8 +3,8 @@ import java.awt.Color;
 import javax.swing.plaf.synth.ColorType;
 
 public class CarTransporter extends Truck2 {
-private FlatbedOnOff flatbedOnOff;
-private boolean onOffFlatbed;
+private FlatbedUpDown flatbedUpDown;
+private boolean upDownFlatbed;
 public double currentspeed;
 public double carsLoad;
 
@@ -12,17 +12,17 @@ public double carsLoad;
 
    public CarTransporter(){
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
-       onOffFlatbed();
+       upDownFlatbed();
        this.currentspeed = 0;
    }
 
-   private boolean onOffFlatbed() {
-       flatbedOnOff.onOffFlatbed();
+   private boolean upDownFlatbed() {
+       flatbedUpDown.upDownFlatbed();
        return true;
    }
 
-   public boolean getOnOffFlatbed(boolean b){
-    return onOffFlatbed();
+   public boolean getUpDownFlatbed(boolean b){
+    return upDownFlatbed();
    }
 
    public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
