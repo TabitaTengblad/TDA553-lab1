@@ -43,12 +43,12 @@ public abstract class Vehicle {
         return color;
     }
 
-    public void incrementSpeed(double amount){
-	    currentSpeed = Math.min(getCurrentSpeed() + speedFactor() * amount,enginePower);
+    private void incrementSpeed(double amount){
+	    currentSpeed = Math.min(currentSpeed + speedFactor() * amount,enginePower);
     }
 
-    public void decrementSpeed(double amount){
-        currentSpeed = Math.max(getCurrentSpeed() - speedFactor() * amount,0);
+    private void decrementSpeed(double amount){
+        currentSpeed = Math.max(currentSpeed - speedFactor() * amount,0);
     }
 
     public double speedFactor(){
@@ -79,8 +79,8 @@ public abstract class Vehicle {
     }
 
     public void move(){
-    x += x + (Math.cos(direction)*currentSpeed);
-    y += y + (Math.sin(direction)*currentSpeed);
+    x = x + (Math.cos(direction)*currentSpeed);
+    y = y + (Math.sin(direction)*currentSpeed);
     }
 
     public void turnLeft(){

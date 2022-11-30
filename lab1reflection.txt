@@ -47,7 +47,7 @@ eller enginPower. Gas() kan inte bli negativ eftersom amount inte kan vara negat
 
         - calls to brake() cannot result in the speed increasing:
 
-I breake kallar vi på decrementSpeed, som ändrar currentSpeed enligt en matematisk uträkning.
+I brake kallar vi på decrementSpeed, som ändrar currentSpeed enligt en matematisk uträkning.
 Uträkningen ser ut såhär:
 
         public void decrementSpeed(double amount){
