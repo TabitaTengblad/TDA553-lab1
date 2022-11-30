@@ -17,7 +17,7 @@ public double carsLoad;
    }
 
    private boolean upDownFlatbed() {
-       flatbedOnOff.UpDownFlatbed();
+       flatbedUpDown.upDownFlatbed();
        return true;
    }
 
