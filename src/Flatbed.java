@@ -1,6 +1,6 @@
 public class Flatbed {
     
-    private double angle;
+    public double angle;
 
     public Flatbed(double angle){
         this.angle = angle;
@@ -13,5 +13,7 @@ public void raiseFlatBed(){
     
 }
 
+//--------Minnesanteckningar-----------------------
+//Finns ingen konstruktor här, ska det finnas?
 
 

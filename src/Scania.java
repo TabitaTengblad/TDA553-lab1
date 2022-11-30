@@ -10,9 +10,9 @@ public class Scania extends Truck2 {
 
     public Scania(){
         super(2, Color.RED, 125, "Scania", 5, 20,20 );
-        this.flatbedAngle = new FlatbedAngle(0);
-        this.angleOnFlatbed();
-        this.currentspeed = 0;
+        flatbedAngle = new FlatbedAngle(0);
+        angleOnFlatbed();
+        currentspeed = 0;
     }
 
     private void angleOnFlatbed() {

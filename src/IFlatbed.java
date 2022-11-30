@@ -1,4 +1,3 @@
-
 interface IFlatbed{
-void raiseFlatBed();
+    void raiseFlatBed();
 }
