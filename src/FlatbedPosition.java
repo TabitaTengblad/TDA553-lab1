@@ -1,12 +1,12 @@
-public class FlatbedUpDown {
+public class FlatbedPosition {
     
     public boolean flatbedUp;
-    public FlatbedUpDown(){
+    public FlatbedPosition(){
         this.flatbedUp = false;
 
     }
 
-    public boolean upDownFlatbed(){
+    public boolean getFlatbedPosition(){
          return flatbedUp;
     } 
 
