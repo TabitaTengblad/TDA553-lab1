@@ -9,10 +9,10 @@ import CarTransporter;
 public class cartransportertest {
     
     @Test
-    public boolean flatbedOnisOn(){  // Inte klar, fattar inte varför den klagar... :(
+    public void flatbedOnisOn(){  // Inte klar, fattar inte varför den klagar... :(
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getOnOffFlatbed(false);
-        assertTrue(testCarTransporter.getOnOffFlatbed() = false); //varför måste det vara en variabel på vänster sida??
+        assertTrue(testCarTransporter.getOnOffFlatbed(false) == false); //varför måste det vara en variabel på vänster sida??
 
     }
 
