@@ -12,7 +12,7 @@ public class cartransportertest {
     public boolean flatbedOnisOn(){  // Inte klar, fattar inte varför den klagar... :(
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getOnOffFlatbed(false);
-        assertTrue(testCarTransporter.getOnOffFlatbed() = false); //varför måste det vara en variabel på vänster sida??
+        assertTrue(testCarTransporter.getOnOffFlatbed() == false); //varför måste det vara en variabel på vänster sida??
 
     }
 

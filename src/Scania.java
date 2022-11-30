@@ -1,13 +1,17 @@
 import java.awt.Color;
 public class Scania extends Truck2 {
 
-    private FlatbedAngle flatbedAngle;
+    FlatbedAngle flatbedAngle;
     private double currentspeed;
+    private double x;
+    private double y;
 
     public Scania(){
         super(2, Color.RED, 125, "Scania", 5, 20,20 );
         flatbedAngle = new FlatbedAngle(0);
         currentspeed = 0;
+        x = getX();
+        y = getY();
     }
 
     public void setAngleOnFlatbed2(double angle) {
@@ -23,24 +27,28 @@ public class Scania extends Truck2 {
         if(currentspeed > 0);
         flatbedAngle.setAngleOnFlatbed(0);
                 return flatbedAngle.getAngle();
-         }
-        
-        
-    public double getCurrentSpeed(){  // inte klar än...alls
-        return flatbedAngle.setAngleOnFlatbed();
-        }    
+         }  
 
-    public double ensureFlatbedAngleIsZero(){
-        if (flatbedAngle.setAngleOnFlatbed() > 0){
+        @Override
+        public void move() {
+            if (flatbedAngle.getAngle() > 0){ 
+                x += 0;
+                y += 0;
 
-            //overrida move-metoden och anropa den riktiga om vinkeln är rätt
-            //när man flyttar den vill man kolla så det stämmer
+            }
+            }
 
+    
+    public double getX(){
+        return x;
+    }
+
+    public double getY(){
+        return y;
+    }
         }
-    }
-    }
-    
     
 
-//-------------Minnesanteckningar------------------------------------------------
-// göra metoder för alla kraven, klart kanske.
+
+//-------------Minnesanteckningar---------{---------------------------------------
+// göra metoder för alla kraven
