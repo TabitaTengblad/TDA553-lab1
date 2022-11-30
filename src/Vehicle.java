@@ -23,9 +23,9 @@ public abstract class Vehicle {
         this.currentSpeed = 0; //Finns ej i Vehicle på rad 15, ska det vara så?
     }
 
-    public void getCurrentSpeed(Double speed){
-        currentSpeed = speed;
-    }
+   // public void getCurrentSpeed(Double speed){
+   //     currentSpeed = speed;
+   // }
 
     public int getNrDoors(){ //ja
         return nrDoors;
@@ -51,11 +51,11 @@ public abstract class Vehicle {
         currentSpeed = Math.max(currentSpeed - speedFactor() * amount,0);
     }
 
-    public double speedFactor(){
+    public abstract double speedFactor(){
         return 0.1;
     } //klar
 
-    public double speedFactor(double num){
+    public abstract double speedFactor(double num){
         return num;
     } //klar
 
@@ -84,11 +84,11 @@ public abstract class Vehicle {
     }
 
     public void turnLeft(){
-        direction = direction +  90 *(Math.PI/180);
+        direction = direction -  90 *(Math.PI/180);
     }
 
     public void turnRight(){
-        direction = direction - 90 *(Math.PI/180);
+        direction = direction + 90 *(Math.PI/180);
     }
 
       // Kanske funkar
