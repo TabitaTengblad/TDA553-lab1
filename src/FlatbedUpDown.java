@@ -1,12 +1,12 @@
-public class FlatbedOnOff {
+public class FlatbedUpDown {
     
     public boolean flatbedUp;
-    public FlatbedOnOff(){
+    public FlatbedUpDown(){
         this.flatbedUp = false;
 
     }
 
-    public boolean onOffFlatbed(){
+    public boolean upDownFlatbed(){
          return flatbedUp;
     } 
 
