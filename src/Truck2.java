@@ -16,6 +16,20 @@ public class Truck2 extends Vehicle {
             double y) {
         super(nrDoors, color, enginePower, modelName, direction, x, y);
         //TODO Auto-generated constructor stub
-
     }
+
+
+    @Override
+    public double speedFactor() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+
+    @Override
+    public double speedFactor(double num) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
 }

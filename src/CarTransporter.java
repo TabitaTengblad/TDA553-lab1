@@ -4,7 +4,6 @@ import javax.swing.plaf.synth.ColorType;
 
 public class CarTransporter extends Truck2 {
 private FlatbedPosition flatbedPosition;
-private boolean flatbedPosition;
 public double currentspeed;
 public double carsLoad;
 
@@ -17,8 +16,8 @@ public double carsLoad;
    }
 
    private boolean getFlatbedPosition() {
-       flatbedUpDown.getFlatbedPosition();
-       return true;
+       flatbedPosition.flatbedPosition();
+       return true; 
    }
 
    public boolean getFlatbedPosition(boolean b){

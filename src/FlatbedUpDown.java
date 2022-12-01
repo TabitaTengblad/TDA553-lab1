@@ -1,20 +1,18 @@
-public class FlatbedPosition {
+public class FlatbedUpDown {
     
     public boolean flatbedUp;
-    public FlatbedPosition(){
+    public FlatbedUpDown(){
         this.flatbedUp = false;
 
     }
 
-    public boolean flatbedPosition(){
+    public boolean upDownFlatbed(){
          return flatbedUp;
-    }
-
-
+    } 
 
 }
 
 //---------Minnesanteckningar---------------------
 
-//Beata approves
+//Beata aproves
 //sub-typer till flatbed
