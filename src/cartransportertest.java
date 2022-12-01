@@ -12,7 +12,11 @@ public class cartransportertest {
     public void flatbedOnisOn(){  // Inte klar, fattar inte varför den klagar... :(
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getOnOffFlatbed(false);
+<<<<<<< HEAD
         assertTrue(testCarTransporter.getOnOffFlatbed(false) == false); //varför måste det vara en variabel på vänster sida??
+=======
+        assertTrue(testCarTransporter.getOnOffFlatbed() == false); //varför måste det vara en variabel på vänster sida??
+>>>>>>> 7d8411fade3a0d62b036a169ba036dedd1debd72
 
     }
 

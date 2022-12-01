@@ -16,6 +16,6 @@ public class Truck2 extends Vehicle {
             double y) {
         super(nrDoors, color, enginePower, modelName, direction, x, y);
         //TODO Auto-generated constructor stub
-    }
 
+    }
 }
