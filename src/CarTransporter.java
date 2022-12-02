@@ -6,8 +6,9 @@ public class CarTransporter extends Truck2 {
 private FlatbedPosition flatbedPosition;
 private boolean flatbedPosition;
 public double currentspeed;
-private double distance;
 private double maxDistance;
+private Loading loading;
+private double maxNrOfCars;
 
  
 
@@ -15,6 +16,9 @@ private double maxDistance;
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
        getFlatbedPosition();
        this.currentspeed = 0;
+       this.maxDistance = 5;
+       this.maxNrOfCars = 3;
+       this.loading = new Loading();
    }
 
    private boolean getFlatbedPosition() {
@@ -33,19 +37,20 @@ private double maxDistance;
    }
    
    private Vehicle UnLoadCarTransporter(){   
-    if (flatbedPosition == true & carsLoad > 0);
-    Loading.Unload();
+    if (flatbedPosition == true & Loading.getNrOfCars() > 0);
+    loading.unLoad();
    }
 
     private boolean distanceIsRight(){
-    distance = Loading.calculateDistance(1, 1, x, y);
+    double distance = Loading.calculateDistance(1, 1, x, y);
     return Loading.distanceIsRight(distance, maxDistance);
    }
 
    private void LoadCarTransporter(Vehicle car){
-    if (flatbedPosition == true & DistanceIsRight == true);
-    Loading.load();
+    if (flatbedPosition == true & distanceIsRight() == true & Loading.getNrOfCars() <= maxNrOfCars){
+    loading.load();
    }
+}
 }
 //----------------Minnesanteckningar-----------------------------------------------------------------------------------------------
 

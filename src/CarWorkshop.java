@@ -17,8 +17,8 @@ public class CarWorkshop {
     }
 
     public Vehicle unLoadCar(){  
-        if (distanceOff() == true){ 
-        loading.unLoad();
+        if (distanceIsRight() == true){ 
+        return loading.unLoad();
         }
        }
         

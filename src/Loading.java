@@ -14,7 +14,7 @@ public class Loading {
   
        }
 
-       public int getNrOfCars(){
+       public static int getNrOfCars(){
         return cars.size();
        }
 
@@ -24,7 +24,7 @@ public class Loading {
         return distance;
        }
 
-    public boolean distanceIsRight(double distance, double maxDistance){
+    public static boolean distanceIsRight(double distance, double maxDistance){
     
         if (distance <= maxDistance);
         return true;
