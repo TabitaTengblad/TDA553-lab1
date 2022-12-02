@@ -1,32 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Loading {
     
-    public boolean onOffFlatbed;
-    public boolean DistanceIsRight;
-    public double carsLoad;
-    public boolean distance;
+    private List<Vehicle> cars; 
     
         public Loading(){
-            onOffFlatbed = true;
-            carsLoad = 1;
-            distance = true; 
+            cars = new ArrayList<>();
         }
 
-       public void UnLoadCarTransporter(){    
-        if (onOffFlatbed == true & carsLoad > 0);
-        carsLoad -= 1;
+       public Vehicle unLoad(){   
+        return cars.remove(0);
+  
        }
 
-       public void DistanceOff(){  //metod för hur långt från cartransport som bilen hamnar
-        
+       public int getNrOfCars(){
+        return cars.size();
        }
 
-    public boolean DistanceIsRight(){
-        if (distance = true);
-        return true;
+
+       public static double calculateDistance(double carX, double carY, double transporterX, double transporterY){
+        double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)));
+        return distance;
        }
+
+    public static boolean distanceIsRight(double distance, double maxDistance){
     
-       public void LoadCarTransporter(){
-        if (onOffFlatbed == true & DistanceIsRight == true);
-        carsLoad += 1;
+        if (distance <= maxDistance){
+        return true;
+        }else {
+        return false;
+       }
+    }
+    
+    
+       public void load(Vehicle car){
+        cars.add(car);
        }
 }

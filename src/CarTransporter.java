@@ -4,8 +4,11 @@ import javax.swing.plaf.synth.ColorType;
 
 public class CarTransporter extends Truck2 {
 private FlatbedPosition flatbedPosition;
+private boolean flatbedPosition;
 public double currentspeed;
-public double carsLoad;
+private double maxDistance;
+private Loading loading;
+private double maxNrOfCars;
 
  
 
@@ -13,11 +16,14 @@ public double carsLoad;
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
        getFlatbedPosition();
        this.currentspeed = 0;
+       this.maxDistance = 5;
+       this.maxNrOfCars = 3;
+       this.loading = new Loading();
    }
 
    private boolean getFlatbedPosition() {
-       flatbedPosition.flatbedPosition();
-       return true; 
+       flatbedPosition.getFlatbedPosition();
+       return true;
    }
 
    public boolean getFlatbedPosition(boolean b){
@@ -31,6 +37,21 @@ public double carsLoad;
    }
 
    
+   private Vehicle UnLoadCarTransporter(){   
+    if (flatbedPosition == true & loading.getNrOfCars() > 0);
+    loading.unLoad();
+   }
+
+    private boolean distanceIsRight(){
+    double distance = Loading.calculateDistance(1, 1, x, y);
+    return Loading.distanceIsRight(distance, maxDistance);
+   }
+
+   private void LoadCarTransporter(Vehicle car){
+    if (flatbedPosition == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+    loading.load(car);
+   }
+}
 }
 //----------------Minnesanteckningar-----------------------------------------------------------------------------------------------
 
