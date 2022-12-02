@@ -5,20 +5,7 @@ import java.awt.Color;
 import org.junit.Test;
 
 public class saab95test {
-/* 
-    @Test //TODO när gas och brake funkar kan vi ta bort denna
-    public void incrementSpeedIncreasesSpeed() { //klar
-        Saab95 testSaab = new Saab95();
-        testSaab.incrementSpeed(10);
-        assertTrue(testSaab.getCurrentSpeed() == 12.5);
-    }
-    @Test
-    public void decrementSpeedDecreesesSpeed(){ //inte klar
-        Saab95 testSaab = new Saab95();
-        testSaab.decrementSpeed(5);
-        assertTrue(testSaab.getCurrentSpeed() == 0 );
-    }
- */
+
     @Test
     public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
@@ -51,22 +38,22 @@ public class saab95test {
         testSaab.startEngine();
         testSaab.move();
         assertTrue(testSaab.getX() > startXposition);
-        // kolla om x värdet efter funktionen är mindre/större än innan fär att se om den har röt sig
+    
     }
     @Test
-    public void doesTurboTurnOff(){ //klar
+    public void doesTurboTurnOff(){ 
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOff();
         assertTrue(testSaab.isTurboOn() == false);
     }
     @Test
-    public void doesTurboTurnOn(){ //klar
+    public void doesTurboTurnOn(){ 
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOn();
         assertTrue(testSaab.isTurboOn() == true);
     }
     @Test
-    public void testNumberOfDoors(){ //klar
+    public void testNumberOfDoors(){ 
         Saab95 testSaab = new Saab95();
         testSaab.getNrDoors();
         assertTrue(testSaab.getNrDoors() == 2);
@@ -75,7 +62,6 @@ public class saab95test {
     public void testGetCurrentSpeed(){
 
     }
-
 
     @Test 
     public void testingGas(){
@@ -90,10 +76,21 @@ public class saab95test {
         testVehicle.brake(1);
         assertEquals(0, testVehicle.getCurrentSpeed(), 0.01);
         }
+        
+    @Test
+    public void testingTurnLeft(){
+        Vehicle testVehicle = new Saab95();
+        testVehicle.turnLeft();
+        assertEquals(3.429, testVehicle.getDirection(), 0.01);
+    }
+
+    @Test
+    public void testingTurnRight(){
+        Vehicle testVehicle = new Saab95();
+        testVehicle.turnRight();
+        assertEquals(6.570, testVehicle.getDirection(), 0.01);
+    }
     }
 
 
-    
-//exception invalid value
-//delegation och composition
 

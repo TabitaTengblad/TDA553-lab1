@@ -17,7 +17,7 @@ private double maxNrOfCars;
        this.loading = new Loading();
    }
 
-   private boolean getFlatbedPosition() {
+   boolean getFlatbedPosition(boolean b) {
        return flatbedPosition.flatbedPosition();
    }
 

@@ -1,12 +1,10 @@
 import java.awt.*;
-import javax.swing.plaf.synth.ColorType;
 
 public abstract class Vehicle implements IMovable{
     
     private int nrDoors; 
     private Color color;
     private double enginePower;
-    private String modelName;
     private double direction;
     private double x;
     private double y;
@@ -16,21 +14,17 @@ public abstract class Vehicle implements IMovable{
         this.nrDoors = nrDoors;
         this.color = color; //testat
         this.enginePower = enginePower; 
-        this.modelName = modelName;
         this.direction = direction;
         this.x = x;
         this.y = y;
         this.currentSpeed = 0; //Finns ej i Vehicle på rad 15, ska det vara så?
     }
 
-   // public void getCurrentSpeed(Double speed){
-   //     currentSpeed = speed;
-   // }
 
-    public int getNrDoors(){ //ja
+    public int getNrDoors(){ 
         return nrDoors;
     }
-    public double getEnginePower(){ //ja
+    public double getEnginePower(){ 
         return enginePower;
     }
 
@@ -39,8 +33,12 @@ public abstract class Vehicle implements IMovable{
         return currentSpeed;
     }
 
-    public Color getColor(){ //ja
+    public Color getColor(){ 
         return color;
+    }
+
+    public double getDirection(){
+        return direction;
     }
 
     private void incrementSpeed(double amount){
@@ -50,24 +48,16 @@ public abstract class Vehicle implements IMovable{
     private void decrementSpeed(double amount){
         currentSpeed = Math.max(currentSpeed - speedFactor() * amount,0);
     }
-/* 
-    public abstract double speedFactor(){
-        return 0.1;
-    } //klar
 
-    public abstract double speedFactor(double num){
-        return num;
-    } //klar
-*/
-    public void setColor(Color clr){ //klar
+    public void setColor(Color clr){ 
 	    color = clr;
     }
 
-    public void startEngine(){ //testat
+    public void startEngine(){ 
 	    currentSpeed = 0.1;
     }
 
-    public void stopEngine(){ //testat
+    public void stopEngine(){
 	    currentSpeed = 0;
     }
     public double getX(){
@@ -96,7 +86,6 @@ public abstract class Vehicle implements IMovable{
         direction = direction + 90 *(Math.PI/180);
     }
 
-      // Kanske funkar
       public void gas(double amount){
         if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount); 
       }
