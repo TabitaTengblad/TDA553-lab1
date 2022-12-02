@@ -37,7 +37,7 @@ private double maxNrOfCars;
    }
    
    private Vehicle UnLoadCarTransporter(){   
-    if (flatbedPosition == true & Loading.getNrOfCars() > 0);
+    if (flatbedPosition == true & loading.getNrOfCars() > 0);
     loading.unLoad();
    }
 
@@ -47,8 +47,8 @@ private double maxNrOfCars;
    }
 
    private void LoadCarTransporter(Vehicle car){
-    if (flatbedPosition == true & distanceIsRight() == true & Loading.getNrOfCars() <= maxNrOfCars){
-    loading.load();
+    if (flatbedPosition == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+    loading.load(car);
    }
 }
 }

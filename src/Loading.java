@@ -10,30 +10,31 @@ public class Loading {
         }
 
        public Vehicle unLoad(){   
-        return cars.remove(0)
+        return cars.remove(0);
   
        }
 
-       public static int getNrOfCars(){
+       public int getNrOfCars(){
         return cars.size();
        }
 
 
        public static double calculateDistance(double carX, double carY, double transporterX, double transporterY){
-        double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)))
+        double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)));
         return distance;
        }
 
     public static boolean distanceIsRight(double distance, double maxDistance){
     
-        if (distance <= maxDistance);
+        if (distance <= maxDistance){
         return true;
+        }else {
+        return false;
        }
-       else{
-        return false
-       }
+    }
+    
     
        public void load(Vehicle car){
-        cars.add(car)
+        cars.add(car);
        }
 }

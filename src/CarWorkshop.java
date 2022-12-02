@@ -16,9 +16,9 @@ public class CarWorkshop {
             this.loading = new Loading();
     }
 
-    public Vehicle unLoadCar(){  
+    public void unLoadCar(){  
         if (distanceIsRight() == true){ 
-        return loading.unLoad();
+        loading.unLoad();
         }
        }
         
@@ -28,8 +28,8 @@ public class CarWorkshop {
        }
     
        public void Load(Vehicle car){
-        if (distanceIsRight() == true & Loading.getNrOfCars() <= maxNrOfCars){ 
-        loading.load();
+        if (distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){ 
+        loading.load(car);
        }
     }
 }
