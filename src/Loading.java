@@ -7,22 +7,24 @@ public class Loading {
     
         public Loading(){
             cars = new ArrayList<>();
-        }
+        }  
 
        public Vehicle unLoad(){   
         return cars.remove(0);
   
-       }
+       } 
 
        public int getNrOfCars(){
         return cars.size();
        }
 
 
+
+
        public static double calculateDistance(double carX, double carY, double transporterX, double transporterY){
         double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)));
         return distance;
-       }
+       }  
 
     public static boolean distanceIsRight(double distance, double maxDistance){
     
@@ -31,10 +33,10 @@ public class Loading {
         }else {
         return false;
        }
-    }
+    } 
     
     
        public void load(Vehicle car){
-        cars.add(car);
+        cars.add(car); 
        }
 }
