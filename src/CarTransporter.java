@@ -1,11 +1,8 @@
 import java.awt.Color;
 
-import javax.swing.plaf.synth.ColorType;
 
 public class CarTransporter extends Truck2 {
 private FlatbedPosition flatbedPosition;
-private boolean flatbedPosition;
-public double currentspeed;
 private double maxDistance;
 private Loading loading;
 private double maxNrOfCars;
@@ -15,7 +12,6 @@ private double maxNrOfCars;
    public CarTransporter(){
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
        getFlatbedPosition();
-       this.currentspeed = 0;
        this.maxDistance = 5;
        this.maxNrOfCars = 3;
        this.loading = new Loading();
@@ -26,23 +22,23 @@ private double maxNrOfCars;
    }
 
    public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
-    if (currentspeed > 0);
+    if (getCurrentSpeed() > 0);
     return false;
 
    }
    
    private Vehicle unLoadCarTransporter(){   
     if (getFlatbedPosition() == true & loading.getNrOfCars() > 0);
-    loading.unLoad();
+    return loading.unLoad();
    }
 
     private boolean distanceIsRight(){
-    double distance = Loading.calculateDistance(1, 1, x, y);
+    double distance = Loading.calculateDistance(1, 1, getX(), getY());
     return Loading.distanceIsRight(distance, maxDistance);
    }
 
    private void loadCarTransporter(Vehicle car){
-    if (flatbedPosition == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+    if (getFlatbedPosition() == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
     loading.load(car);
    }
 }
