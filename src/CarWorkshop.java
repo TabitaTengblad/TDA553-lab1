@@ -21,12 +21,12 @@ public class CarWorkshop {
        }
         
     public boolean distanceIsRight(){
-        distance = Loading.calculateDistance(1, 1, x, y);
+        distance = Loading.calculateDistance(1.0, 1.0, x, y);
         Loading.distanceIsRight(distance, maxDistance);
        }
     
        public void Load(Vehicle car){
-        if (distanceIsRight() == true || Loading.getNrOfCars() <= maxNrOfCars){ 
+        if (distanceIsRight() == true & Loading.getNrOfCars() <= maxNrOfCars){ 
         Loading.load();
        }
     }

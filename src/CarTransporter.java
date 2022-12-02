@@ -6,7 +6,7 @@ public class CarTransporter extends Truck2 {
 private FlatbedPosition flatbedPosition;
 private boolean flatbedPosition;
 public double currentspeed;
-//private double distance;
+private double distance;
 private double maxDistance;
 
  
@@ -38,8 +38,8 @@ private double maxDistance;
    }
 
     private boolean distanceIsRight(){
-    double distance = Loading.calculateDistance(1, 1, x, y)
-    Loading.distanceIsRight(double distance, double maxDistance);
+    distance = Loading.calculateDistance(1, 1, x, y);
+    Loading.distanceIsRight(distance, maxDistance);
    }
 
    private void LoadCarTransporter(Vehicle car){

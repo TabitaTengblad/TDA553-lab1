@@ -19,12 +19,12 @@ public class Loading {
        }
 
 
-       public double calculateDistance(){
+       public double calculateDistance(double carX, double carY, double transporterX, double transporterY){
         double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)))
         return distance;
        }
 
-    public boolean distanceIsRight(distance, maxDistance){
+    public boolean distanceIsRight(double distance, double maxDistance){
     
         if (distance <= maxDistance);
         return true;
