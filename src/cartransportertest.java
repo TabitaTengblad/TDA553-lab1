@@ -11,8 +11,8 @@ public class cartransportertest {
     @Test
     public void flatbedOnisOn(){  // Inte klar, fattar inte varför den klagar... :(
         CarTransporter testCarTransporter = new CarTransporter();
-        testCarTransporter.getOnOffFlatbed(false);
-        assertTrue(testCarTransporter.getOnOffFlatbed() == false); //varför måste det vara en variabel på vänster sida??
+        testCarTransporter.getFlatbedPosition(false);
+        assertTrue(testCarTransporter.currentSpeed() == 0); //varför måste det vara en variabel på vänster sida??
 
     }
 

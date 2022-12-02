@@ -25,11 +25,4 @@ public class Truck2 extends Vehicle {
         return 0;
     }
 
-
-    @Override
-    public double speedFactor(double num) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
 }
