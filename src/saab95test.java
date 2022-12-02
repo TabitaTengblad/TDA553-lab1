@@ -1,6 +1,5 @@
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import java.awt.Color;
 import org.junit.Test;
@@ -77,29 +76,23 @@ public class saab95test {
 
     }
 
-     @Test //TODO måste ha assert för att funka, testar inget nu
-     public void testIsGas(){
-         Vehicle testSaab = new Saab95();
-         testSaab.gas(2);
-         assertTrue(testSaab.getCurrentSpeed() == 1); }
-    
-    
+
     @Test 
-    public void exceptionForGas(){
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            Integer.parseInt()
+    public void testingGas(){
+        Vehicle testVehicle = new Saab95();
+        testVehicle.gas(1);
+        assertEquals(1.25, testVehicle.getCurrentSpeed(), 0.01);
+    }
+
+    @Test
+    public void testingBreak(){
+        Vehicle testVehicle = new Saab95();
+        testVehicle.brake(1);
+        assertEquals(0, testVehicle.getCurrentSpeed(), 0.01);
         }
     }
-    
-   
-    @Test
-    public void testIsBrake(){
-        Vehicle testSaab= new Saab95();
-        testSaab.brake(2);
-        assertTrue(testSaab.speedFactor() == 1);
 
-    }
-}
+
     
 //exception invalid value
 //delegation och composition
