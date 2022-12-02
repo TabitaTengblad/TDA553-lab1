@@ -39,7 +39,7 @@ private double maxDistance;
 
     private boolean distanceIsRight(){
     distance = Loading.calculateDistance(1, 1, x, y);
-    Loading.distanceIsRight(distance, maxDistance);
+    return Loading.distanceIsRight(distance, maxDistance);
    }
 
    private void LoadCarTransporter(Vehicle car){

@@ -22,7 +22,7 @@ public class CarWorkshop {
         
     public boolean distanceIsRight(){
         distance = Loading.calculateDistance(1.0, 1.0, x, y);
-        Loading.distanceIsRight(distance, maxDistance);
+        return Loading.distanceIsRight(distance, maxDistance);
        }
     
        public void Load(Vehicle car){
