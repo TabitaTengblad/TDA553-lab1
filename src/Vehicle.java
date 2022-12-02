@@ -1,12 +1,10 @@
 import java.awt.*;
-import javax.swing.plaf.synth.ColorType;
 
 public abstract class Vehicle implements IMovable{
     
     private int nrDoors; 
     private Color color;
     private double enginePower;
-    private String modelName;
     private double direction;
     private double x;
     private double y;
@@ -16,7 +14,6 @@ public abstract class Vehicle implements IMovable{
         this.nrDoors = nrDoors;
         this.color = color; //testat
         this.enginePower = enginePower; 
-        this.modelName = modelName;
         this.direction = direction;
         this.x = x;
         this.y = y;
