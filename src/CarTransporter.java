@@ -22,12 +22,7 @@ private double maxNrOfCars;
    }
 
    private boolean getFlatbedPosition() {
-       flatbedPosition.getFlatbedPosition();
-       return true;
-   }
-
-   public boolean getFlatbedPosition(boolean b){
-    return getFlatbedPosition();
+       return flatbedPosition.flatbedPosition();
    }
 
    public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
@@ -35,10 +30,9 @@ private double maxNrOfCars;
     return false;
 
    }
-
    
-   private Vehicle UnLoadCarTransporter(){   
-    if (flatbedPosition == true & loading.getNrOfCars() > 0);
+   private Vehicle unLoadCarTransporter(){   
+    if (getFlatbedPosition() == true & loading.getNrOfCars() > 0);
     loading.unLoad();
    }
 
@@ -47,7 +41,7 @@ private double maxNrOfCars;
     return Loading.distanceIsRight(distance, maxDistance);
    }
 
-   private void LoadCarTransporter(Vehicle car){
+   private void loadCarTransporter(Vehicle car){
     if (flatbedPosition == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
     loading.load(car);
    }
