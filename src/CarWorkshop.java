@@ -4,6 +4,7 @@ public class CarWorkshop {
         private double distance;
         private double x;
         private double y;
+        private Loading loading;
 
 
     
@@ -12,11 +13,12 @@ public class CarWorkshop {
             this.maxDistance = 5;
             this.x = 5;
             this.y = 5;
+            this.loading = new Loading();
     }
 
     public Vehicle unLoadCar(){  
         if (distanceOff() == true){ 
-        Loading.unLoad();
+        loading.unLoad();
         }
        }
         
@@ -27,7 +29,7 @@ public class CarWorkshop {
     
        public void Load(Vehicle car){
         if (distanceIsRight() == true & Loading.getNrOfCars() <= maxNrOfCars){ 
-        Loading.load();
+        loading.load();
        }
     }
 }

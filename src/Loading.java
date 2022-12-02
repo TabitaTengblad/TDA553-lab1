@@ -19,7 +19,7 @@ public class Loading {
        }
 
 
-       public double calculateDistance(double carX, double carY, double transporterX, double transporterY){
+       public static double calculateDistance(double carX, double carY, double transporterX, double transporterY){
         double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)))
         return distance;
        }
