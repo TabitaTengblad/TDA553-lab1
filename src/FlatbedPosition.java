@@ -7,7 +7,7 @@ public class FlatbedPosition {
     }
 
     public boolean flatbedPosition(){
-         return flatbedUp;
+        return flatbedUp;
     }
 
 
