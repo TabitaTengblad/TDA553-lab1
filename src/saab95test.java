@@ -6,7 +6,7 @@ import java.awt.Color;
 import org.junit.Test;
 
 public class saab95test {
-
+/* 
     @Test //TODO när gas och brake funkar kan vi ta bort denna
     public void incrementSpeedIncreasesSpeed() { //klar
         Saab95 testSaab = new Saab95();
@@ -19,7 +19,7 @@ public class saab95test {
         testSaab.decrementSpeed(5);
         assertTrue(testSaab.getCurrentSpeed() == 0 );
     }
- 
+ */
     @Test
     public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
@@ -78,16 +78,25 @@ public class saab95test {
     }
 
      @Test //TODO måste ha assert för att funka, testar inget nu
-     public void isGas(){
+     public void testIsGas(){
          Vehicle testSaab = new Saab95();
-            testSaab.gas(2);
-
+         testSaab.gas(2);
+         assertTrue(testSaab.getCurrentSpeed() == 1); }
     
+    
+    @Test 
+    public void exceptionForGas(){
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Integer.parseInt()
+        }
     }
+    
+   
     @Test
-    public void isBrake(){
+    public void testIsBrake(){
         Vehicle testSaab= new Saab95();
-            testSaab.brake(2);
+        testSaab.brake(2);
+        assertTrue(testSaab.speedFactor() == 1);
 
     }
 }

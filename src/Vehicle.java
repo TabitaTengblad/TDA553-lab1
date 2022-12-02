@@ -1,7 +1,7 @@
 import java.awt.*;
 import javax.swing.plaf.synth.ColorType;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements IMovable{
     
     private int nrDoors; 
     private Color color;
@@ -50,7 +50,7 @@ public abstract class Vehicle {
     private void decrementSpeed(double amount){
         currentSpeed = Math.max(currentSpeed - speedFactor() * amount,0);
     }
-
+/* 
     public abstract double speedFactor(){
         return 0.1;
     } //klar
@@ -58,7 +58,7 @@ public abstract class Vehicle {
     public abstract double speedFactor(double num){
         return num;
     } //klar
-
+*/
     public void setColor(Color clr){ //klar
 	    color = clr;
     }
@@ -78,23 +78,33 @@ public abstract class Vehicle {
         return y;
     }
 
+    public abstract double speedFactor();
+
+    @Override
     public void move(){
     x = x + (Math.cos(direction)*currentSpeed);
     y = y + (Math.sin(direction)*currentSpeed);
     }
 
+    @Override
     public void turnLeft(){
         direction = direction -  90 *(Math.PI/180);
     }
 
+    @Override
     public void turnRight(){
         direction = direction + 90 *(Math.PI/180);
     }
 
       // Kanske funkar
       public void gas(double amount){
-        if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount);  
-    }
+        try:{
+        if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount); 
+        else throw new IllegalArgumentException("Please enter value between 0 and 1");
+        catch(IllegalArgumentException e){
+        System.out.println(e.getMessage());}
+        }
+      }
 
     public void brake(double amount){
         if (amount >= 0.0 || amount <= 1.0) decrementSpeed(amount);   
