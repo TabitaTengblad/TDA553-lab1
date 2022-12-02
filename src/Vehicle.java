@@ -98,12 +98,7 @@ public abstract class Vehicle implements IMovable{
 
       // Kanske funkar
       public void gas(double amount){
-        try:{
         if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount); 
-        else throw new IllegalArgumentException("Please enter value between 0 and 1");
-        catch(IllegalArgumentException e){
-        System.out.println(e.getMessage());}
-        }
       }
 
     public void brake(double amount){
