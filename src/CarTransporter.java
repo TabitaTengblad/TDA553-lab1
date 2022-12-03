@@ -2,7 +2,6 @@ import java.awt.Color;
 
 
 public class CarTransporter extends Truck2 {
-private boolean flatbedState;
 private double maxDistance;
 private Loading loading;
 private double maxNrOfCars;
@@ -20,13 +19,13 @@ public boolean flatbedState;
     this.flatbedState = true;
    }
 
-   public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
+   public boolean CarTransporterStationary(){ 
     if (getCurrentSpeed() > 0);
     return false;
    }
    
-   public Vehicle unloadCarTransporter(){   
-    if (getFlatbedState() == true & loading.getNrOfCars() > 0);
+   public Vehicle unloadCarTransporter(){  //varför måste den vara en variabel? Hur gör jag den till det :(
+    if (getFlatbedState() = true & loading.getNrOfCars() > 0);
     return loading.unload();
    }
 
@@ -35,8 +34,8 @@ public boolean flatbedState;
     return Loading.distanceIsRight(distance, maxDistance);
    }
 
-   private void loadCarTransporter(Vehicle car){
-    if (getFlatbedState() == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+   private void loadCarTransporter(Vehicle car){  //varför måste den vara en variabel?
+    if (getFlatbedState() = true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
     loading.load(car);
    }
 }

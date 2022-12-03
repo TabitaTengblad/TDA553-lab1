@@ -18,7 +18,7 @@ public class CarWorkshop {
 
     public void unLoadCar(){  
         if (distanceIsRight() == true){ 
-        loading.unLoad();
+        loading.unload();
         }
        }
         
