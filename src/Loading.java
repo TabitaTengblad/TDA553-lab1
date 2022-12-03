@@ -9,17 +9,13 @@ public class Loading {
             cars = new ArrayList<>();
         }  
 
-       public Vehicle unLoad(){   
+       public Vehicle unload(){   
         return cars.remove(0);
-  
        } 
 
        public int getNrOfCars(){
         return cars.size();
        }
-
-
-
 
        public static double calculateDistance(double carX, double carY, double transporterX, double transporterY){
         double distance = Math.sqrt(((carX + transporterX) * (carX + transporterX)) + ((carY + transporterY) * (carY + transporterY)));

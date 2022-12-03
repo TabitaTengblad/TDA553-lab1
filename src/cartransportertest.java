@@ -4,32 +4,30 @@ import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
-import CarTransporter;
-
 public class cartransportertest {
     
-    @Test
-    public void flatbedOnisOn(){  // Inte klar :(
+    @Test // Inte klar, den ena vill ha en double, den andra en boolean
+    public void flatbedOnisOn(){  
         CarTransporter testCarTransporter = new CarTransporter();
-        testCarTransporter.getFlatbedPosition(false);
-        assertTrue(testCarTransporter.currentSpeed() == false); //varför måste det vara en variabel på vänster sida??
+        testCarTransporter.getFlatbedState();   
+        assertTrue(testCarTransporter.getCurrentSpeed() == );
     }
 
-    @Test  //testa de var för sig
-    public void GetFlatbedPositionGetsFlatbedPosition(){
+    @Test   //Inte klar, en av dem vill ha en void och den andra vill ha en boolean?
+    public void GetFlatbedPositionGetsFlatbedPosition(){   
         CarTransporter testCarTransporter = new CarTransporter();
-        testCarTransporter.getFlatbedPosition(false);
-        assertTrue(testCarTransporter.getFlatbedPosition() == true);
+        testCarTransporter.flatbedState(true);
+        assertTrue(testCarTransporter.flatbedState() == true);
     }
 
-    @Test
+    @Test  //Inte klar
     public void getNrOfCarsgetsNrofCars(){
         CarTransporter testCarTransporter =  new CarTransporter();
         testCarTransporter.getNrOfCars();
         assertTrue(testCarTransporter.getNrOfCars() = )
     }
 
-    @Test
+    @Test //Inte klar
     public void isDistanceRight(){
         CarTransporter testCarTransporter =  new CarTransporter();
     
