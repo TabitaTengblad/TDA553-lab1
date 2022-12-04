@@ -9,7 +9,7 @@ public class Loading {
             cars = new ArrayList<>();
         }  
 
-       public Vehicle unload(){   
+       public Vehicle unLoad(){   
         return cars.remove(0);
        } 
 

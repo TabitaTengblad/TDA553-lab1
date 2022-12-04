@@ -6,6 +6,11 @@ public class FlatbedState {  //ingen position, mer av ett state
     public FlatbedState(){
         this.flatbedUp = false;
     }
+
+    public boolean flatbedState(){
+        return flatbedUp;
+    }
+
 }
 
 //---------Minnesanteckningar---------------------

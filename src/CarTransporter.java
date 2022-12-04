@@ -2,44 +2,45 @@ import java.awt.Color;
 
 
 public class CarTransporter extends Truck2 {
+private FlatbedState flatbedState;
 private double maxDistance;
 private Loading loading;
 private double maxNrOfCars;
-public boolean flatbedState;
 
+ 
 
    public CarTransporter(){
        super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
+       //getFlatbedState();
        this.maxDistance = 5;
        this.maxNrOfCars = 3;
-       this.loading = new Loading();   
+       this.loading = new Loading();
    }
 
-   public void getFlatbedState() {
-    this.flatbedState = true;
+   public boolean getFlatbedState() {
+       return flatbedState.flatbedState();
    }
 
-   public boolean CarTransporterStationary(){ 
+   public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
     if (getCurrentSpeed() > 0);
     return false;
+
    }
    
-   public Vehicle unloadCarTransporter(){  //varför måste den vara en variabel? Hur gör jag den till det :(
-    if (getFlatbedState() = true & loading.getNrOfCars() > 0);
-    return loading.unload();
+   public Vehicle unLoadCarTransporter(){   
+    if (getFlatbedState() == true & loading.getNrOfCars() > 0);
+    return loading.unLoad();
    }
 
     private boolean distanceIsRight(){
     double distance = Loading.calculateDistance(1, 1, getX(), getY());
     return Loading.distanceIsRight(distance, maxDistance);
    }
-
-   private void loadCarTransporter(Vehicle car){  //varför måste den vara en variabel?
-    if (getFlatbedState() = true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+   public void loadCarTransporter(Vehicle car){
+    if (getFlatbedState() == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
     loading.load(car);
    }
 }
-
 //----------Metoder som CarTransporterTest vill införa om man gör en quickfiix------
 public void flatbedState(boolean b) {
     
