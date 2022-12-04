@@ -27,28 +27,22 @@ private double maxNrOfCars;
 
    }
    
-   public Vehicle unLoadCarTransporter(){   
+   public Vehicle unLoadCarTransporter(){     //testar var för sig
     if (getFlatbedState() == true & loading.getNrOfCars() > 0);
     return loading.unLoad();
    }
 
-    private boolean distanceIsRight(){
+    private boolean distanceIsRight(){  //behöver inte testa
     double distance = Loading.calculateDistance(1, 1, getX(), getY());
     return Loading.distanceIsRight(distance, maxDistance);
    }
-   public void loadCarTransporter(Vehicle car){
+   public void loadCarTransporter(Vehicle car){  
     if (getFlatbedState() == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
     loading.load(car);
    }
 }
 //----------Metoder som CarTransporterTest vill införa om man gör en quickfiix------
-public void flatbedState(boolean b) {
-    
-}
 
-public boolean flatbedState() {
-    return false;
-}
 
 }
 //----------------Minnesanteckningar-----------------------------------------------------------------------------------------------

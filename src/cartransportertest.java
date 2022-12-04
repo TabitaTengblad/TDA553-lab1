@@ -21,18 +21,12 @@ public class cartransportertest {
     }
 
     @Test  //Inte klar
-    public void getNrOfCarsgetsNrofCars(){
+    public void getNrOfCarsgetsNrOfCars(){
         CarTransporter testCarTransporter =  new CarTransporter();
         testCarTransporter.getNrOfCars();
         assertTrue(testCarTransporter.getNrOfCars() = )
     }
-
-    @Test //Inte klar
-    public void isDistanceRight(){
-        CarTransporter testCarTransporter =  new CarTransporter();
     
-    }
 }
 
 //------Minnesanteckningar--------------------------------------------------------------------
-// testa om det går att köra när den är uppe, alltså kraven som implemeteras i CarTransporter
