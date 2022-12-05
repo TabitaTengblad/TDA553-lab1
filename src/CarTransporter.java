@@ -26,11 +26,29 @@ public class CarTransporter extends Truck2 {
         return false;
     }
 
+<<<<<<< HEAD
     public Vehicle unLoadCarTransporter() { // testar var för sig
         if (getFlatbedState() == true & loading.getNrOfCars() > 0)
             ;
         return loading.unLoad();
     }
+=======
+   public void setFlatbedState(boolean position){   //upp = false
+    if (getCurrentSpeed() == 0){
+    flatbedState.changeFlatbedState(position);
+    }
+    }
+
+   public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
+    if (getCurrentSpeed() > 0);
+    return false;
+   }
+   
+   public Vehicle unLoadCarTransporter(){     //testar var för sig
+    if (getFlatbedState() == true & loading.getNrOfCars() > 0);
+    return loading.unLoad();
+   }
+>>>>>>> c13733ed99616522bb3fe6184e2535b104934a11
 
     private boolean distanceIsRight() { // behöver inte testa
         double distance = Loading.calculateDistance(1, 1, getX(), getY());
