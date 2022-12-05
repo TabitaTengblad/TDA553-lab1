@@ -23,7 +23,7 @@ public class cartransportertest {
     public void testLoading(){
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getNrOfCars();
-        assertTrue(testCarTransporter.getNrOfCars() == 2 );
+        assertTrue(testCarTransporter.getNrOfCars() == 0 );
     }
 }
 
