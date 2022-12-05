@@ -13,7 +13,7 @@ Metoderna gas() och brake() kallas på av både Volvo240 och Saab95 från Vehicl
 som är beroende av en speedfactor. Dessa är implementerade på olika sätt i de olika bilmodellerna, vilket skulle kunna göra att 
 de inte följer Liskows Substitution Principle. Eftersom (nästan) alla bilar har egna värden som avgör deras speedfactor
 finns det inga gemensamma värden att nämna i Vehicle, förutom att metoden för speedfactor ska existera i alla subklasser.
-Därför är den gjord som en abstrakt metod, alltså behövs en implementtion i alla bilmodeller. 
+Därför är den gjord som en abstrakt metod, alltså behövs en implementering i alla bilmodeller. 
 Detta gör att vi endast lägger till information när vi implementerar gas och brake, vilket är tillåtet enligt Liskows 
 Substitution Principle.
 
@@ -28,12 +28,13 @@ ett temporärt värde på 1 (vi har inte fått någon info om vad den ska göra 
 och alla lastbilar delar attributen i Truck, därför valde vi superklass.
 Sedan insåg vi att både CarTransporter och CarWorkshop måste ha förmågan att lasta på och av bilar med liknande krav. 
 Då gjorde vi klassen load som har metoder som vi använde med hjälp av delegation (distanceIsRight()) och composition 
-(load(), unLoad()). Eftersom CarTransporter HAR ett avstånd och HAR förmågan att lasta av och på, så lämpar sig inte 
+(load(), unload()). Eftersom CarTransporter HAR ett avstånd och HAR förmågan att lasta av och på, så lämpar sig inte 
 superklasser i detta fallet.
 
 Did you need to modify the design from lab 1 in order to make these extensions? If so, how could you have noticed that your design
 from Lab 1 did not follow the Open-Closed Principle before you started working on Lab 2?
 
-Vi använde oss av superklass och subklass i labb 1, så vi behövde inte ändra på polymorfismen mellan klasserna vehicle, Saab95 och Volvo240
+Vi använde oss av superklass och subklass mellan bilarna och Vehicle i labb 1, så vi behövde inte ändra val av polymorfism mellan
+ klasserna vehicle, Saab95 och Volvo240
 Däremot hade vi inte gjort turbon i Saab95 till en interface. Det var inte eller helt nödvändigt i denna labb, men interface hade 
 gjort det lättare att göra en ny bil med turbo vid behov. Därför ändrade vi den.

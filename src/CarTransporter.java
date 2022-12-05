@@ -22,8 +22,13 @@ public class CarTransporter extends Truck2 {
    public boolean getFlatbedState() { 
        return flatbedState.flatbedState();
    }
+   public void setFlatbedState(boolean position){   //upp = false
+    if (getCurrentSpeed() == 0){
+    flatbedState.changeFlatbedState(position);
+    }
+    }
 
-   public boolean carTransporterStationary(){
+   public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
     if (getCurrentSpeed() > 0);
     return false;
    }
