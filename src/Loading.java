@@ -9,11 +9,12 @@ public class Loading {
         cars = new ArrayList<>();
     }
 
-    public Vehicle unLoad() {
+    public Vehicle unLoad() {  //inte klar än!!!
         if (getNrOfCars() > 0){
             return cars.remove(0);
         }
-        else{
+        else {
+            return null;    //vet ej om detta kommer fungera
         }
     }
 

@@ -14,6 +14,7 @@ public class CarTransporter extends Truck2 {
         this.maxDistance = 5;
         this.maxNrOfCars = 3;
         this.loading = new Loading();
+ 
     }
 
     public boolean getFlatbedState() {
@@ -26,13 +27,6 @@ public class CarTransporter extends Truck2 {
         return false;
     }
 
-<<<<<<< HEAD
-    public Vehicle unLoadCarTransporter() { // testar var för sig
-        if (getFlatbedState() == true & loading.getNrOfCars() > 0)
-            ;
-        return loading.unLoad();
-    }
-=======
    public void setFlatbedState(boolean position){   //upp = false
     if (getCurrentSpeed() == 0){
     flatbedState.changeFlatbedState(position);
@@ -48,7 +42,6 @@ public class CarTransporter extends Truck2 {
     if (getFlatbedState() == true & loading.getNrOfCars() > 0);
     return loading.unLoad();
    }
->>>>>>> c13733ed99616522bb3fe6184e2535b104934a11
 
     private boolean distanceIsRight() { // behöver inte testa
         double distance = Loading.calculateDistance(1, 1, getX(), getY());
@@ -66,6 +59,10 @@ public class CarTransporter extends Truck2 {
         return loading.getNrOfCars();
     }
 
+    public boolean changeFlatbedState(){
+        return flatbedState.changeFlatbedState(boolean position);  //why no work?? :C 
+        //om man lägger in så som den vill att man ska göra blir det fel i parantesen (public boolean)
+    }
 }
 
 // ----------------Minnesanteckningar-----------------------------------------------------------------------------------------------

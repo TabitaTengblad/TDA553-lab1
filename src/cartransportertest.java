@@ -1,11 +1,14 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
+
+import javax.swing.text.Position;
+
 import org.junit.Test;
 
 public class cartransportertest {
     
-    @Test //Klart, men ska vi testa detta?
+    @Test 
     public void testCarTransporterStatoionary (){  
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getCurrentSpeed();   
@@ -19,11 +22,19 @@ public class cartransportertest {
         assertTrue(testCarTransporter.getFlatbedState() == false);
     }
 
-    @Test  //Inte klar
+    @Test  
     public void testLoading(){
         CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getNrOfCars();
         assertTrue(testCarTransporter.getNrOfCars() == 0 );
+    }
+
+    @Test 
+    public void setFaltbedStateTest(){// döp om till mer logiskt namn, döpte bara så länge
+        CarTransporter testCarTransporter = new CarTransporter();
+        testCarTransporter.getCurrentSpeed();
+        testCarTransporter.changeFlatbedState();
+        assertTrue(testCarTransporter.changeFlatbedState() == false );
     }
 }
 
