@@ -60,7 +60,6 @@ public class saab95test {
     }
     @Test
     public void testGetCurrentSpeed(){
-
     }
 
     @Test 

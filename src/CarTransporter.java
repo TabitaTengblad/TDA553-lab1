@@ -1,30 +1,31 @@
 import java.awt.Color;
-
+import java.util.ArrayList;
 
 public class CarTransporter extends Truck2 {
-private FlatbedState flatbedState;
-private double maxDistance;
-private Loading loading;
-private double maxNrOfCars;
+    private FlatbedState flatbedState;
+    private double maxDistance;
+    private Loading loading;
+    private double maxNrOfCars;
+    public int getNrOFCars;
 
- 
 
    public CarTransporter(){
-       super(2, Color.BLACK, 125, "Car transporter", 5, 20,20 );
+       super(2, Color.BLACK, 125, "Car transporter", 5, 20,20);
        //getFlatbedState();
+       this.flatbedState = new FlatbedState();
        this.maxDistance = 5;
        this.maxNrOfCars = 3;
        this.loading = new Loading();
-   }
+       this.getNrOFCars = 2; }
+      
 
-   public boolean getFlatbedState() {
+   public boolean getFlatbedState() { 
        return flatbedState.flatbedState();
    }
 
-   public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
+   public boolean carTransporterStationary(){
     if (getCurrentSpeed() > 0);
     return false;
-
    }
    
    public Vehicle unLoadCarTransporter(){     //testar var för sig
@@ -36,15 +37,15 @@ private double maxNrOfCars;
     double distance = Loading.calculateDistance(1, 1, getX(), getY());
     return Loading.distanceIsRight(distance, maxDistance);
    }
+
    public void loadCarTransporter(Vehicle car){  
-    if (getFlatbedState() == true & distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
+    if (getFlatbedState() == true & distanceIsRight() == true & loading.getNrOfCars() < maxNrOfCars & getCurrentSpeed() == 0){
     loading.load(car);
    }
 }
-//----------Metoder som CarTransporterTest vill införa om man gör en quickfiix------
-
 
 }
+
 //----------------Minnesanteckningar-----------------------------------------------------------------------------------------------
 
 // göra metoder för alla kraven:

@@ -4,9 +4,10 @@ import java.util.List;
 public class Loading {
     
     private List<Vehicle> cars; 
-    
-        public Loading(){
-            cars = new ArrayList<>();
+   
+        
+    public Loading(){
+        cars = new ArrayList<>();
         }  
 
        public Vehicle unLoad(){   
@@ -31,8 +32,9 @@ public class Loading {
        }
     } 
     
-    
        public void load(Vehicle car){
         cars.add(car); 
        }
+
+        
 }

@@ -1,4 +1,3 @@
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
@@ -6,27 +5,26 @@ import org.junit.Test;
 
 public class cartransportertest {
     
-    @Test // Inte klar, den ena vill ha en double, den andra en boolean
-    public void flatbedOnisOn(){  
+    @Test //Klart, men ska vi testa detta?
+    public void testCarTransporterStatoionary (){  
         CarTransporter testCarTransporter = new CarTransporter();
-        testCarTransporter.getFlatbedState();   
-        assertTrue(testCarTransporter.getCurrentSpeed() == );
+        testCarTransporter.getCurrentSpeed();   
+        assertTrue(testCarTransporter.carTransporterStationary() == false );
     }
 
-    @Test   //Inte klar, en av dem vill ha en void och den andra vill ha en boolean?
-    public void GetFlatbedPositionGetsFlatbedPosition(){   
+    @Test
+    public void GetFlatbedStateGetsFlatbedState(){   
         CarTransporter testCarTransporter = new CarTransporter();
-        testCarTransporter.flatbedState(true);
-        assertTrue(testCarTransporter.flatbedState() == true);
+        testCarTransporter.getFlatbedState();
+        assertTrue(testCarTransporter.getFlatbedState() == false);
     }
 
     @Test  //Inte klar
-    public void getNrOfCarsgetsNrOfCars(){
-        CarTransporter testCarTransporter =  new CarTransporter();
+    public void testLoading(){
+        CarTransporter testCarTransporter = new CarTransporter();
         testCarTransporter.getNrOfCars();
-        assertTrue(testCarTransporter.getNrOfCars() = )
+        assertTrue(testCarTransporter.getNrOfCars() == 2 );
     }
-    
 }
 
 //------Minnesanteckningar--------------------------------------------------------------------
