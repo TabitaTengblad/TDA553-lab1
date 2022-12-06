@@ -1,5 +1,4 @@
 import java.awt.Color;
-import java.util.ArrayList;
 
 public class CarTransporter extends Truck2 {
     private FlatbedState flatbedState;
@@ -33,6 +32,11 @@ public class CarTransporter extends Truck2 {
     }
     }
 
+    public boolean changeFlatbedState() {
+        return false; 
+    }
+    
+
    public boolean CarTransporterStationary(){ //Världens längsta metod-namn, ni kan ändra om ni vill :)
     if (getCurrentSpeed() > 0);
     return false;
@@ -57,11 +61,8 @@ public class CarTransporter extends Truck2 {
 
     public int getNrOfCars() {
         return loading.getNrOfCars();
-    }
-
-    public boolean changeFlatbedState(){
-        return flatbedState.changeFlatbedState(boolean position);  //why no work?? :C 
-        //om man lägger in så som den vill att man ska göra blir det fel i parantesen (public boolean)
+    
+    
     }
 }
 
