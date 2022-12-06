@@ -23,3 +23,7 @@ public class FlatbedState {  //ingen position, mer av ett state
 }
 
 
+
+
+//sub-typer till flatbed
+//skriva om, vill inte wrapa in det så mycket
