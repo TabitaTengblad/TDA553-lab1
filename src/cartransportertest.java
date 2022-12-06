@@ -1,7 +1,4 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
-import javax.swing.text.Position;
 import org.junit.Test;
 
 public class cartransportertest {
@@ -34,5 +31,3 @@ public class cartransportertest {
         assertTrue(testCarTransporter.changeFlatbedState() == false );
     }
 }
-
-//------Minnesanteckningar--------------------------------------------------------------------

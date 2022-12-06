@@ -22,4 +22,4 @@ public class FlatbedState {  //ingen position, mer av ett state
     }
 }
 
-//---------Minnesanteckningar---------------------
+

@@ -14,7 +14,7 @@ public class Loading {
             return cars.remove(0);
         }
         else {
-            return null;    //vet ej om detta kommer fungera
+            return null;   
         }
     }
 

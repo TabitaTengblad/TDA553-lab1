@@ -14,7 +14,4 @@ public void raiseFlatBed(){
     
 }
 
-//--------Minnesanteckningar-----------------------
-//Finns ingen konstruktor här, ska det finnas?
-
 
