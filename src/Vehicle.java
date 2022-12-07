@@ -54,7 +54,7 @@ public abstract class Vehicle implements IMovable{
     }
 
     public void startEngine(){ 
-	    currentSpeed = 0.1;
+	    currentSpeed = 1;
     }
 
     public void stopEngine(){
