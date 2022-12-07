@@ -20,33 +20,33 @@ public class CarController {
 
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
-    // A list of cars, modify if needed
-    ArrayList<ACar> cars = new ArrayList<>();
-
+    // A list of vehicles, modify if needed
+    ArrayList<Vehicle> vehicles = new ArrayList<>();
+    
     //methods:
 
     public static void main(String[] args) {
         // Instance of this class
         CarController cc = new CarController();
 
-        cc.cars.add(new Volvo240());
+        cc.vehicles.add(new Volvo240());
 
         // Start a new view and send a reference of self
-        cc.frame = new CarView("CarSim 1.0", cc);
+        cc.frame = new CarView("vehiclesim 1.0", cc);
 
         // Start the timer
         cc.timer.start();
     }
 
-    /* Each step the TimerListener moves all the cars in the list and tells the
+    /* Each step the TimerListener moves all the vehicles in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (ACar car : cars) {
+            for (Vehicle vehicle : vehicles) {
                 car.move();
-                int x = (int) Math.round(car.getPosition().getX());
-                int y = (int) Math.round(car.getPosition().getY());
+                int x = (int) Math.round(car.getX());
+                int y = (int) Math.round(car.getY());
                 frame.drawPanel.moveit(x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -57,7 +57,7 @@ public class CarController {
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (ACar car : cars
+        for (Vehicle vehicle : vehicles
                 ) {
             car.gas(gas);
         }

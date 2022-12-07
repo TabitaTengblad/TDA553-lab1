@@ -68,6 +68,9 @@ public abstract class Vehicle implements IMovable{
         return y;
     }
 
+   //public double getPosition(){
+    //    return x; y;
+  //  }
     public abstract double speedFactor();
 
     @Override
