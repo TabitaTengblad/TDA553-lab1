@@ -44,9 +44,9 @@ public class CarController {
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle vehicle : vehicles) {
-                car.move();
-                int x = (int) Math.round(car.getX());
-                int y = (int) Math.round(car.getY());
+                vehicle.move();
+                int x = (int) Math.round(vehicle.getX());
+                int y = (int) Math.round(vehicle.getY());
                 frame.drawPanel.moveit(x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -59,7 +59,7 @@ public class CarController {
         double gas = ((double) amount) / 100;
         for (Vehicle vehicle : vehicles
                 ) {
-            car.gas(gas);
+            vehicle.gas(gas);
         }
     }
 }
