@@ -7,7 +7,7 @@ public class Scania extends Truck2 {
     private double y;
 
     public Scania(){
-        super(2, Color.RED, 125, "Scania", 5, 0,0 );
+        super(2, Color.RED, 125, "Scania", 5, 100,0 );
         flatbedAngle = new FlatbedAngle(0);
         currentspeed = 0;
         x = getX();

@@ -22,9 +22,9 @@ public class DrawPanel extends JPanel{
     void moveit(int x, int y){
         volvoPoint.x = x;
         volvoPoint.y = y;
-        saabPoint.x = x;
+        saabPoint.x = 100;
         saabPoint.y = y;
-        scaniaPoint.x = x;
+        scaniaPoint.x = 200;
         scaniaPoint.y = y;
     }
 
