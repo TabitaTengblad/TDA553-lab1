@@ -8,7 +8,7 @@ public class Saab95 extends Vehicle{
   
 
     public Saab95(){
-        super(2, Color.red, 125, "Saab95", 5, 0, 0);
+        super(2, Color.red, 125, "Saab95", 2, 0, 0);
         this.turboOn = false;
        // motor = new Motor(); så det ska se ut i dom andra
         stopEngine();

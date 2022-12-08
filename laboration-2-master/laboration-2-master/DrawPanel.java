@@ -19,11 +19,17 @@ public class DrawPanel extends JPanel{
     Point scaniaPoint = new Point();
 
     // TODO: Make this genereal for all cars
-    void moveit(int x, int y){
+    void moveVolvo(int x, int y){
         volvoPoint.x = x;
         volvoPoint.y = y;
-        saabPoint.x = 100;
+    }
+
+    void moveSaab(int x, int y){
+        saabPoint.x = x;
         saabPoint.y = y;
+    }
+
+    void moveScania(int x, int y){
         scaniaPoint.x = 200;
         scaniaPoint.y = y;
     }
@@ -59,5 +65,9 @@ public class DrawPanel extends JPanel{
         g.drawImage(volvoImage, volvoPoint.x, volvoPoint.y, null); // see javadoc for more info on the parameters
         g.drawImage(saabImage, saabPoint.x, saabPoint.y, null); 
         g.drawImage(scaniaImage, scaniaPoint.x, scaniaPoint.y, null); 
+    }
+
+    public void update() {
+        repaint();
     }
 }

@@ -47,12 +47,14 @@ public class CarController {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle vehicle : vehicles) {
                 vehicle.move();
-                int x = (int) Math.round(vehicle.getX());
-                int y = (int) Math.round(vehicle.getY());
-                frame.drawPanel.moveit(x, y);
-                // repaint() calls the paintComponent method of the panel
-                frame.drawPanel.repaint();
             }
+
+            frame.drawPanel.moveVolvo((int) vehicles.get(0).getX(), (int) vehicles.get(0).getY());
+            frame.drawPanel.moveSaab((int) vehicles.get(1).getX(), (int) vehicles.get(1).getY());
+            frame.drawPanel.moveScania((int) vehicles.get(2).getX(), (int) vehicles.get(2).getY());
+                // repaint() calls the paintComponent method of the panel
+            frame.drawPanel.repaint();
+    
         }
     }
 

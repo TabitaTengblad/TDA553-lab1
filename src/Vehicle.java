@@ -90,11 +90,11 @@ public abstract class Vehicle implements IMovable{
     }
 
       public void gas(double amount){
-        if (amount >= 0.0 || amount <= 1.0)  incrementSpeed(amount); 
+        if (amount >= 0.0 && amount <= 1.0)  incrementSpeed(amount); 
       }
 
     public void brake(double amount){
-        if (amount >= 0.0 || amount <= 1.0) decrementSpeed(amount);   
+        if (amount >= 0.0 && amount <= 1.0) decrementSpeed(amount);   
     
     }
 }
