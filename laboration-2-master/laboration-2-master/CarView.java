@@ -27,7 +27,8 @@ public class CarView extends JFrame{
     JPanel gasPanel = new JPanel();
     JSpinner gasSpinner = new JSpinner();
     int gasAmount = 0;
-    JLabel gasLabel = new JLabel("Amount of gas");
+    int brakeAmount = 0;
+    JLabel gasLabel = new JLabel("Amount");
 
     JButton gasButton = new JButton("Gas");
     JButton brakeButton = new JButton("Brake");
@@ -66,6 +67,7 @@ public class CarView extends JFrame{
         gasSpinner.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent e) {
                 gasAmount = (int) ((JSpinner)e.getSource()).getValue();
+                brakeAmount = (int) ((JSpinner)e.getSource()).getValue();
             }
         });
 
@@ -92,21 +94,39 @@ public class CarView extends JFrame{
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(startButton);
-
+//dessa gör inget, hur implementerar vi detta?
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
 
+//dessa gör inget, hur implementerar vi detta?
+
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
         gasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                carC.gas(10);
+                carC.gas(gasAmount);
                 drawPanel.paintComponent(getGraphics());
             }
+        });
+        brakeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                carC.brake(brakeAmount);
+                drawPanel.paintComponent(getGraphics());
+            }
+        });
+
+        turboOnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                carC.turboOn();
+                drawPanel.paintComponent(getGraphics());
+            }
+
         });
 
         // Make the frame pack all it's components by respecting the sizes if possible.

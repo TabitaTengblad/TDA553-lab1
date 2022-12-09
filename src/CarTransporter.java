@@ -1,13 +1,13 @@
 import java.awt.Color;
 
-public class CarTransporter extends Truck2 {
+public class CarTransporter extends Truck {
     private FlatbedState flatbedState;
     private double maxDistance;
     private Loading loading;
     private double maxNrOfCars;
 
     public CarTransporter() {
-        super(2, Color.BLACK, 125, "Car transporter", 5, 20, 20);
+        super(2, Color.BLACK, 125, "Car transporter", 2, 0, 200);
         // getFlatbedState();
         this.flatbedState = new FlatbedState();
         this.maxDistance = 5;
@@ -61,7 +61,13 @@ public class CarTransporter extends Truck2 {
 
     public int getNrOfCars() {
         return loading.getNrOfCars();
-    
-    
+    }
+
+
+    @Override
+    public void move(){
+        if (flatbedState.flatbedUp = false ){
+           super.move();
+        }
     }
 }

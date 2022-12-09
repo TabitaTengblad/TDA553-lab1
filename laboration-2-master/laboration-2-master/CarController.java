@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.VetoableChangeListener;
 import java.util.ArrayList;
 
 /*
@@ -66,4 +67,21 @@ public class CarController {
             vehicle.gas(gas);
         }
     }
+
+    void brake(int amount) {
+        double brake = ((double) amount) / 100;
+        for (Vehicle vehicle : vehicles
+                ) {
+            vehicle.brake(brake);
+        }
+    }
+
+    void turboOn() {
+        for (Vehicle vehicle : vehicles){
+            if (vehicle instanceof ITurbo){
+                ((ITurbo)vehicle).setTurboOn();
+            }
+        }
+           
+        }
 }

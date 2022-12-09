@@ -1,11 +1,11 @@
 import java.awt.Color;
 
-public class Scania extends Truck2 {
+public class Scania extends Truck {
 
     private FlatbedAngle flatbedAngle;
 
     public Scania() {
-        super(2, Color.RED, 125, "Scania", 2, 100, 0);
+        super(2, Color.RED, 125, "Scania", 0, 0, 200);
         flatbedAngle = new FlatbedAngle(0);
     }
 
