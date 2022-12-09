@@ -1,6 +1,6 @@
 import java.awt.Color;
 
-public class Scania extends Truck2 {
+public class Scania extends Truck {
 
     private FlatbedAngle flatbedAngle;
 

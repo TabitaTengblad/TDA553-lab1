@@ -1,7 +1,7 @@
 import java.awt.*;
 
 
-public class Saab95 extends Vehicle{
+public class Saab95 extends Vehicle implements ITurbo{
 
     public boolean turboOn;
     //public Motor motor;
@@ -13,16 +13,16 @@ public class Saab95 extends Vehicle{
        // motor = new Motor(); så det ska se ut i dom andra
         stopEngine();
     }
-
+    @Override
     public boolean isTurboOn(){ //Klar
         return turboOn;
     }
-    
+    @Override
     public void setTurboOn(){ //Klar
       //  motor.turboOn();
 	    turboOn = true;
     }
-
+    @Override
     public void setTurboOff(){ //Klar
 	    turboOn = false;
     }

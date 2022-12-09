@@ -94,12 +94,14 @@ public class CarView extends JFrame{
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(startButton);
-
+//dessa gör inget, hur implementerar vi detta?
 
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X/5-15,200));
         this.add(stopButton);
+
+//dessa gör inget, hur implementerar vi detta?
 
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
@@ -116,6 +118,15 @@ public class CarView extends JFrame{
                 carC.brake(brakeAmount);
                 drawPanel.paintComponent(getGraphics());
             }
+        });
+
+        turboOnButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                carC.turboOn();
+                drawPanel.paintComponent(getGraphics());
+            }
+
         });
 
         // Make the frame pack all it's components by respecting the sizes if possible.

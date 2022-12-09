@@ -1,7 +1,8 @@
 
 
-public class FlatbedState {  //ingen position, mer av ett state 
+public class FlatbedState {  
     
+    public static boolean changeFlatbedState;
     public boolean flatbedUp;
 
     public FlatbedState(){

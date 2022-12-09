@@ -13,12 +13,15 @@ public class DrawPanel extends JPanel{
     BufferedImage volvoImage;
     BufferedImage saabImage;
     BufferedImage scaniaImage;
+
     // To keep track of a singel cars position
+    //ska inte denna ockdå vara för ara vehicle? eller kommer de hamna på samma plats då?
     Point volvoPoint = new Point();
     Point saabPoint = new Point();
     Point scaniaPoint = new Point();
 
-    // TODO: Make this genereal for all cars
+    // TODO: Make this genereal for all cars   
+    // kan man inte implementera detta för bara move, så alla uppdateras? untgåtr från samma x och y-värden ändå, alla rör sig samtidigt.
     void moveVolvo(int x, int y){
         volvoPoint.x = x;
         volvoPoint.y = y;

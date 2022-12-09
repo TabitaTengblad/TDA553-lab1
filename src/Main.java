@@ -28,3 +28,5 @@ public class Main {
     }
     
 }
+
+//kolla så metodrna gör som de ska
