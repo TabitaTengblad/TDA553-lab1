@@ -7,7 +7,7 @@ public class CarTransporter extends Truck2 {
     private double maxNrOfCars;
 
     public CarTransporter() {
-        super(2, Color.BLACK, 125, "Car transporter", 2, 20, 20);
+        super(2, Color.BLACK, 125, "Car transporter", 2, 0, 200);
         // getFlatbedState();
         this.flatbedState = new FlatbedState();
         this.maxDistance = 5;
