@@ -30,7 +30,7 @@ public class DrawPanel extends JPanel{
     }
 
     void moveScania(int x, int y){
-        scaniaPoint.x = 200;
+        scaniaPoint.x = x;
         scaniaPoint.y = y;
     }
 
