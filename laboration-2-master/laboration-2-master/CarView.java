@@ -77,6 +77,7 @@ public class CarView extends JFrame{
 
         this.add(gasPanel);
 
+
         controlPanel.setLayout(new GridLayout(2,4));
 
         controlPanel.add(gasButton, 0);
