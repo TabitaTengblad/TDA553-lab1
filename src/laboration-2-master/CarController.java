@@ -82,6 +82,18 @@ public class CarController {
                 ((ITurbo)vehicle).setTurboOn();
             }
         }
-           
         }
+    
+   void turboOff(){
+        for (Vehicle vehicle : vehicles)
+            if (vehicle instanceof ITurbo){
+                ((ITurbo)vehicle).setTurboOff();
+            }
+    }  
+
+
+   // Start
+   // stop
+   //flatbed
+   
 }
