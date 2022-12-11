@@ -56,8 +56,6 @@ public class CarView extends JFrame{
 
         this.add(drawPanel);
 
-
-
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
                         0, //min
@@ -77,7 +75,6 @@ public class CarView extends JFrame{
 
         this.add(gasPanel);
 
-
         controlPanel.setLayout(new GridLayout(2,4));
 
         controlPanel.add(gasButton, 0);
@@ -89,7 +86,6 @@ public class CarView extends JFrame{
         controlPanel.setPreferredSize(new Dimension((X/2)+4, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
-
 
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
