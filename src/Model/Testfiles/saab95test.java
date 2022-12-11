@@ -23,7 +23,7 @@ public class saab95test {
     public void startEngineStart(){ //klar
         Saab95 testSaab = new Saab95();
         testSaab.startEngine();
-        assertTrue(testSaab.getCurrentSpeed() == 0.1);
+        assertTrue(testSaab.getCurrentSpeed() == 1);
     }
     @Test
     public void stopEngineStop(){ //klar
@@ -37,7 +37,7 @@ public class saab95test {
         double startXposition = testSaab.getX();
         testSaab.startEngine();
         testSaab.move();
-        assertTrue(testSaab.getX() > startXposition);
+        assertTrue(testSaab.getX() < startXposition);
     
     }
     @Test
@@ -65,29 +65,30 @@ public class saab95test {
     @Test 
     public void testingGas(){
         Vehicle testVehicle = new Saab95();
-        testVehicle.gas(1);
-        assertEquals(1.25, testVehicle.getCurrentSpeed(), 0.01);
+        testVehicle.gas(0.5);
+        assertEquals(0.625, testVehicle.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testingBreak(){
         Vehicle testVehicle = new Saab95();
-        testVehicle.brake(1);
-        assertEquals(0, testVehicle.getCurrentSpeed(), 0.01);
+        testVehicle.incrementSpeed(3); //3.75
+        testVehicle.brake(0.5); 
+        assertEquals(3.125, testVehicle.getCurrentSpeed(), 0.01);
         }
         
     @Test
     public void testingTurnLeft(){
         Vehicle testVehicle = new Saab95();
         testVehicle.turnLeft();
-        assertEquals(3.429, testVehicle.getDirection(), 0.01);
+        assertEquals(0.429, testVehicle.getDirection(), 0.01);
     }
 
     @Test
     public void testingTurnRight(){
         Vehicle testVehicle = new Saab95();
         testVehicle.turnRight();
-        assertEquals(6.570, testVehicle.getDirection(), 0.01);
+        assertEquals(3.57, testVehicle.getDirection(), 0.01);
     }
     }
 

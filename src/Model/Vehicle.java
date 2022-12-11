@@ -41,7 +41,7 @@ public abstract class Vehicle implements IMovable{
         return direction;
     }
 
-    private void incrementSpeed(double amount){
+    void incrementSpeed(double amount){
 	    currentSpeed = Math.min(currentSpeed + speedFactor() * amount,enginePower);
     }
 
