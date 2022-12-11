@@ -55,7 +55,6 @@ public class CarController {
             frame.drawPanel.moveScania((int) vehicles.get(2).getX(), (int) vehicles.get(2).getY());
                 // repaint() calls the paintComponent method of the panel
             frame.drawPanel.repaint();
-    
         }
     }
 
@@ -74,26 +73,6 @@ public class CarController {
                 ) {
             vehicle.brake(brake);
         }
-    }
-
-    void turboOn() {
-        for (Vehicle vehicle : vehicles){
-            if (vehicle instanceof ITurbo){
-                ((ITurbo)vehicle).setTurboOn();
-            }
-        }
-        }
-    
-   void turboOff(){
-        for (Vehicle vehicle : vehicles)
-            if (vehicle instanceof ITurbo){
-                ((ITurbo)vehicle).setTurboOff();
-            }
     }  
-
-
-   // Start
-   // stop
-   //flatbed
    
 }

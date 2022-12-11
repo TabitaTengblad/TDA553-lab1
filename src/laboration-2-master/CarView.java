@@ -120,15 +120,6 @@ public class CarView extends JFrame{
             }
         });
 
-        turboOnButton.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                carC.turboOn();
-                drawPanel.paintComponent(getGraphics());
-            }
-
-        });
-
         // Make the frame pack all it's components by respecting the sizes if possible.
         this.pack();
 
