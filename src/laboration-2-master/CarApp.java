@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CarApp {
 
     ArrayList<Vehicle> vehicles = new ArrayList<>();

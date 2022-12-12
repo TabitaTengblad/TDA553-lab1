@@ -22,12 +22,12 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of vehicles, modify if needed
-
+    
+    public CarController(){
+        CarController cc = new CarController();
+    }
     
     //methods:
-
-
-
     /* Each step the TimerListener moves all the vehicles in the list and tells the
     * view to update its images. Change this method to your needs.
     * */
