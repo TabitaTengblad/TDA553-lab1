@@ -1,4 +1,0 @@
-
-interface IFlatbed{
-    void raiseFlatBed();
-}
