@@ -16,6 +16,7 @@ public class DrawPanel extends JPanel{
 
     // To keep track of a singel cars position
     //ska inte denna ockdå vara för ara vehicle? eller kommer de hamna på samma plats då?
+    //ska inte finnas, ska va i move
     Point volvoPoint = new Point();
     Point saabPoint = new Point();
     Point scaniaPoint = new Point();
@@ -23,17 +24,17 @@ public class DrawPanel extends JPanel{
     // TODO: Make this genereal for all cars   
     // kan man inte implementera detta för bara move, så alla uppdateras? untgåtr från samma x och y-värden ändå, alla rör sig samtidigt.
     void moveVolvo(int x, int y){
-        volvoPoint.x = x;
+        volvoPoint.x = x;//bort
         volvoPoint.y = y;
     }
 
     void moveSaab(int x, int y){
-        saabPoint.x = x;
+        saabPoint.x = x;//bort
         saabPoint.y = y;
     }
 
     void moveScania(int x, int y){
-        scaniaPoint.x = x;
+        scaniaPoint.x = x;//bort
         scaniaPoint.y = y;
     }
 

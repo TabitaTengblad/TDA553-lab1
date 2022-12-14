@@ -11,10 +11,10 @@ Likt gas, är inputen till brake en double och vi får ingen direkt output, utan
 
 Metoderna gas() och brake() kallas på av både Volvo240 och Saab95 från Vehicle. Metoden gas kallar på metoden incrementspeed(),
 som är beroende av en speedfactor. Dessa är implementerade på olika sätt i de olika bilmodellerna, vilket skulle kunna göra att 
-de inte följer Liskows Substitution Principle. Eftersom (nästan) alla bilar har egna värden som avgör deras speedfactor
+de inte följer Liskovs Substitution Principle. Eftersom (nästan) alla bilar har egna värden som avgör deras speedfactor
 finns det inga gemensamma värden att nämna i Vehicle, förutom att metoden för speedfactor ska existera i alla subklasser.
 Därför är den gjord som en abstrakt metod, alltså behövs en implementering i alla bilmodeller. 
-Detta gör att vi endast lägger till information när vi implementerar gas och brake, vilket är tillåtet enligt Liskows 
+Detta gör att vi endast lägger till information när vi implementerar gas och brake, vilket är tillåtet enligt Liskovs 
 Substitution Principle.
 
 
@@ -27,8 +27,8 @@ Det var dock inte kvar länge, och vi valde att göra en ny superklass Truck, so
 ett temporärt värde på 1 (vi har inte fått någon info om vad den ska göra för lastbilarna). Scania ÄR en lastbil, 
 och alla lastbilar delar attributen i Truck, därför valde vi superklass.
 Sedan insåg vi att både CarTransporter och CarWorkshop måste ha förmågan att lasta på och av bilar med liknande krav. 
-Då gjorde vi klassen load som har metoder som vi använde med hjälp av delegation (distanceIsRight()) och composition 
-(load(), unload()). Eftersom CarTransporter HAR ett avstånd och HAR förmågan att lasta av och på, så lämpar sig inte 
+Då gjorde vi klassen load som har metoder som vi använde med hjälp av delegation och composition 
+Eftersom CarTransporter HAR ett avstånd och HAR förmågan att lasta av och på, så lämpar sig inte 
 superklasser i detta fallet.
 
 Did you need to modify the design from lab 1 in order to make these extensions? If so, how could you have noticed that your design

@@ -25,6 +25,11 @@ public class CarController {
     
     public CarController(){
         CarController cc = new CarController();
+                // Start a new view and send a reference of self
+                cc.frame = new CarView("vehiclesim 1.0", cc);
+
+                // Start the timer
+                cc.timer.start();
     }
     
     //methods:
@@ -33,13 +38,9 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle vehicle : vehicles) {
+            for (Vehicle vehicle : vehicles) { //måste få tillgång till listan, hur?
                 vehicle.move();
             }
-
-            frame.drawPanel.moveVolvo((int) vehicles.get(0).getX(), (int) vehicles.get(0).getY());
-            frame.drawPanel.moveSaab((int) vehicles.get(1).getX(), (int) vehicles.get(1).getY());
-            frame.drawPanel.moveScania((int) vehicles.get(2).getX(), (int) vehicles.get(2).getY());
                 // repaint() calls the paintComponent method of the panel
             frame.drawPanel.repaint();
         }
