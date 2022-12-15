@@ -12,7 +12,10 @@ public class Scania extends Truck {
     }
 
     public void setAngleOnFlatbed2(double angle) {
-        flatbedAngle.setAngleOnFlatbed(angle);
+        if (getCurrentSpeed() == 0){
+            flatbedAngle.setAngleOnFlatbed(angle);
+        }
+     
     }
 
     public double getAngleOnFlatbed() {
