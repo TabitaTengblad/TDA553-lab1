@@ -1,3 +1,4 @@
+package model;
 import java.awt.*;
 
 public abstract class Vehicle implements IMovable{

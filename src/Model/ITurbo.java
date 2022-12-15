@@ -1,3 +1,4 @@
+package model;
 public interface ITurbo {
     public boolean isTurboOn();
     public void setTurboOn();

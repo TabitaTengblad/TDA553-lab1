@@ -1,11 +1,11 @@
-
+package model.testfiles;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.awt.Color;
 import org.junit.Test;
-
+import model.Saab95;
+import model.Vehicle;
 public class saab95test {
-
     @Test
     public void setColorPaint(){ //klar
         Saab95 testSaab = new Saab95();
@@ -38,22 +38,21 @@ public class saab95test {
         testSaab.startEngine();
         testSaab.move();
         assertTrue(testSaab.getX() < startXposition);
-    
     }
     @Test
-    public void doesTurboTurnOff(){ 
+    public void doesTurboTurnOff(){
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOff();
         assertTrue(testSaab.isTurboOn() == false);
     }
     @Test
-    public void doesTurboTurnOn(){ 
+    public void doesTurboTurnOn(){
         Saab95 testSaab = new Saab95();
         testSaab.setTurboOn();
         assertTrue(testSaab.isTurboOn() == true);
     }
     @Test
-    public void testNumberOfDoors(){ 
+    public void testNumberOfDoors(){
         Saab95 testSaab = new Saab95();
         testSaab.getNrDoors();
         assertTrue(testSaab.getNrDoors() == 2);
@@ -61,29 +60,18 @@ public class saab95test {
     @Test
     public void testGetCurrentSpeed(){
     }
-
-    @Test 
+    @Test
     public void testingGas(){
         Vehicle testVehicle = new Saab95();
         testVehicle.gas(0.5);
         assertEquals(0.625, testVehicle.getCurrentSpeed(), 0.01);
     }
-
-    @Test
-    public void testingBreak(){
-        Vehicle testVehicle = new Saab95();
-        testVehicle.incrementSpeed(3); //3.75
-        testVehicle.brake(0.5); 
-        assertEquals(3.125, testVehicle.getCurrentSpeed(), 0.01);
-        }
-        
     @Test
     public void testingTurnLeft(){
         Vehicle testVehicle = new Saab95();
         testVehicle.turnLeft();
         assertEquals(0.429, testVehicle.getDirection(), 0.01);
     }
-
     @Test
     public void testingTurnRight(){
         Vehicle testVehicle = new Saab95();
@@ -91,6 +79,3 @@ public class saab95test {
         assertEquals(3.57, testVehicle.getDirection(), 0.01);
     }
     }
-
-
-

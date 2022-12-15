@@ -1,14 +1,11 @@
+package model;
 
-
-public class FlatbedState {  
-    
+public class FlatbedState {
     public static boolean changeFlatbedState;
     public boolean flatbedUp;
-
     public FlatbedState(){
         this.flatbedUp = false;
     }
-
     public boolean flatbedState(){
         return flatbedUp;
     }
@@ -19,6 +16,5 @@ public class FlatbedState {
         else if(position == true){
             flatbedUp = true;
         }
-        
     }
 }

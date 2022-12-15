@@ -1,3 +1,5 @@
+package model;
+
 public class CarWorkshop {
         private int maxNrOfCars;
         private double maxDistance;
@@ -5,9 +7,6 @@ public class CarWorkshop {
         private double x;
         private double y;
         private Loading loading;
-
-
-    
         public CarWorkshop(int maxNrOfCars, double maxDistance, double x, double y){
             this.maxNrOfCars = 4;
             this.maxDistance = 5;
@@ -15,20 +14,17 @@ public class CarWorkshop {
             this.y = 5;
             this.loading = new Loading();
     }
-
-    public void unLoadCar(){  
-        if (distanceIsRight() == true){ 
+    public void unLoadCar(){
+        if (distanceIsRight() == true){
         loading.unLoad();
         }
        }
-        
     public boolean distanceIsRight(){
         distance = Loading.calculateDistance(1.0, 1.0, x, y);
         return Loading.distanceIsRight(distance, maxDistance);
        }
-    
        public void Load(Vehicle car){
-        if (distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){ 
+        if (distanceIsRight() == true & loading.getNrOfCars() <= maxNrOfCars){
         loading.load(car);
        }
     }
