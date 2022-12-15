@@ -1,11 +1,11 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
 import model.Saab95;
 import model.Scania;
 import model.Vehicle;
 import model.Volvo240;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Timer;
 public class CarApp {
     // The delay (ms) corresponds to 20 updates a sec (hz)
     private static final int delay = 50;
